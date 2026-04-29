@@ -206,7 +206,7 @@ terra::plot(prob_rast, main = "Detection probability")
 | `bio_to_math()` | Convert biological-scale parameter list → math-scale vector |
 | `start_parms()` | Generate Latin-hypercube starting points from presence-only data |
 | `profile_likelihood()` | Profile one parameter while re-optimising over the rest |
-| `vsp()` | Produce a spatial probability-of-detection map |
+| `habitat_suitability()` | Produce a spatial probability-of-detection map |
 | `interpret_parameters()` | Diagnostic plots of the niche shape |
 | `dist_between_params()` | Distance between two parameter sets (Hungarian algorithm, equivalence-class aware) |
 
@@ -266,21 +266,6 @@ dist_between_params(
 install.packages("devtools")
 devtools::install_github("xsdm-project/xsdm-devel")
 ```
-
-### Run the test suite
-
-``` r
-devtools::test()
-```
-
-Tests are written with **testthat** (≥ 3.0) and cover all exported
-functions. Code coverage is tracked via
-[Codecov](https://app.codecov.io/gh/xsdm-project/xsdm-devel).
-
-### Manual visual tests
-
-Some diagnostics for `interpret_parameters()` require human inspection.
-See `tests/manual/README.md` for instructions on running those scripts.
 
 ### Reporting issues
 
