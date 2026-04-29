@@ -177,15 +177,15 @@ interpret_parameters(
 
 ### 5 · Project the range (virtual species probability map)
 
-`vsp()` uses the fitted parameter list and the full-grid rasters to
-return per-cell detection probabilities:
+`habitat_suitability()` uses the fitted parameter list and the full-grid
+rasters to return per-cell detection probabilities:
 
 ``` r
 # Use the full raster extent (not just occurrence points)
 env_data_full <- list(bio1 = bio1_ts, bio12 = bio12_ts)
 
 # Returns a tibble with x, y, probs by default
-prob_tbl  <- vsp(env_data_full, best_bio)
+prob_tbl  <- habitat_suitability(env_data_full, best_bio)
 head(prob_tbl)
 
 # Or as a SpatRaster for mapping
@@ -328,5 +328,5 @@ BibTeX:
 
 ## License
 
-xsdm is released under the [GNU General Public License v3 or
+xsdm is released under the [GNU Affero General Public License v3 or
 later](LICENSE.md).
