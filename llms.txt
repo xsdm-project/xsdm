@@ -27,6 +27,7 @@ The statistical underpinning is described in:
 ### CRAN (coming soon)
 
 ``` r
+
 install.packages("xsdm")   # not yet on CRAN — see development install below
 ```
 
@@ -35,6 +36,7 @@ install.packages("xsdm")   # not yet on CRAN — see development install below
 Install the latest version directly from GitHub:
 
 ``` r
+
 # install.packages("remotes")
 remotes::install_github("xsdm-project/xsdm-devel")
 ```
@@ -51,6 +53,7 @@ objects needed to run a complete workflow without loading external
 files.
 
 ``` r
+
 library(xsdm)
 
 # The example_1 dataset is a named list bundling all example objects.
@@ -91,6 +94,7 @@ using [CHELSA v2.1](https://www.chelsa-climate.org/) bio1 (mean annual
 temperature) and bio12 (annual precipitation).
 
 ``` r
+
 library(xsdm)
 library(terra)
 
@@ -113,6 +117,7 @@ presence/absence data frame, returning a 3-D array
 `(locations × time × variables)`.
 
 ``` r
+
 # Named list of raster time series (names become the variable labels)
 env_data <- list(bio1 = bio1_ts, bio12 = bio12_ts)
 
@@ -134,6 +139,7 @@ Internally, optimization uses
 with a compiled objective pointer.
 
 ``` r
+
 result <- optimize_likelihood(
   env_dat    = env_dat,
   occ        = occ,
@@ -156,6 +162,7 @@ interpretable scale and plot the inferred log growth–environment
 function:
 
 ``` r
+
 best_bio <- math_to_bio(result$best$par)
 
 # key biological parameters:
@@ -182,6 +189,7 @@ uses the fitted parameter list and the full-grid rasters to return
 per-cell detection probabilities:
 
 ``` r
+
 # Use the full raster extent (not just occurrence points)
 env_data_full <- list(bio1 = bio1_ts, bio12 = bio12_ts)
 
@@ -198,18 +206,18 @@ terra::plot(prob_rast, main = "Detection probability")
 
 ## Key functions
 
-| Function                                                                                          | Purpose                                                                                        |
-|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [`env_data_array()`](https://xsdm-project.github.io/xsdm/reference/env_data_array.md)             | Build a `(locations × time × variables)` array from raster time series and an occurrence table |
-| [`optimize_likelihood()`](https://xsdm-project.github.io/xsdm/reference/optimize_likelihood.md)   | Multi-start MLE fitting; returns solutions sorted by log-likelihood                            |
-| [`loglik_math()`](https://xsdm-project.github.io/xsdm/reference/loglik_math.md)                   | Evaluate the log-likelihood at any math-scale parameter vector                                 |
-| [`math_to_bio()`](https://xsdm-project.github.io/xsdm/reference/math_to_bio.md)                   | Convert math-scale vector → biological-scale parameter list                                    |
-| [`bio_to_math()`](https://xsdm-project.github.io/xsdm/reference/bio_to_math.md)                   | Convert biological-scale parameter list → math-scale vector                                    |
-| [`start_parms()`](https://xsdm-project.github.io/xsdm/reference/start_parms.md)                   | Generate Latin-hypercube starting points from presence-only data                               |
-| [`profile_likelihood()`](https://xsdm-project.github.io/xsdm/reference/profile_likelihood.md)     | Profile one parameter while re-optimising over the rest                                        |
-| [`habitat_suitability()`](https://xsdm-project.github.io/xsdm/reference/habitat_suitability.md)   | Produce a spatial probability-of-detection map                                                 |
-| [`interpret_parameters()`](https://xsdm-project.github.io/xsdm/reference/interpret_parameters.md) | Diagnostic plots of the niche shape                                                            |
-| [`dist_between_params()`](https://xsdm-project.github.io/xsdm/reference/dist_between_params.md)   | Distance between two parameter sets (Hungarian algorithm, equivalence-class aware)             |
+| Function | Purpose |
+|----|----|
+| [`env_data_array()`](https://xsdm-project.github.io/xsdm/reference/env_data_array.md) | Build a `(locations × time × variables)` array from raster time series and an occurrence table |
+| [`optimize_likelihood()`](https://xsdm-project.github.io/xsdm/reference/optimize_likelihood.md) | Multi-start MLE fitting; returns solutions sorted by log-likelihood |
+| [`loglik_math()`](https://xsdm-project.github.io/xsdm/reference/loglik_math.md) | Evaluate the log-likelihood at any math-scale parameter vector |
+| [`math_to_bio()`](https://xsdm-project.github.io/xsdm/reference/math_to_bio.md) | Convert math-scale vector → biological-scale parameter list |
+| [`bio_to_math()`](https://xsdm-project.github.io/xsdm/reference/bio_to_math.md) | Convert biological-scale parameter list → math-scale vector |
+| [`start_parms()`](https://xsdm-project.github.io/xsdm/reference/start_parms.md) | Generate Latin-hypercube starting points from presence-only data |
+| [`profile_likelihood()`](https://xsdm-project.github.io/xsdm/reference/profile_likelihood.md) | Profile one parameter while re-optimising over the rest |
+| [`habitat_suitability()`](https://xsdm-project.github.io/xsdm/reference/habitat_suitability.md) | Produce a spatial probability-of-detection map |
+| [`interpret_parameters()`](https://xsdm-project.github.io/xsdm/reference/interpret_parameters.md) | Diagnostic plots of the niche shape |
+| [`dist_between_params()`](https://xsdm-project.github.io/xsdm/reference/dist_between_params.md) | Distance between two parameter sets (Hungarian algorithm, equivalence-class aware) |
 
 ------------------------------------------------------------------------
 
@@ -221,6 +229,7 @@ each grid point, and returns the profile log-likelihood together with a
 likelihood-ratio confidence threshold.
 
 ``` r
+
 prof <- profile_likelihood(
   profile_parameter  = "mu1",       # parameter to profile (math scale)
   increment_left     = 0.2,
@@ -252,6 +261,7 @@ uses the Hungarian algorithm to find the equivalence-class
 representative of `p1` closest to `p2`:
 
 ``` r
+
 # Both representations belong to the same equivalence class → distance ≈ 0
 dist_between_params(
   p1 = example_1$optim_par_vec,
@@ -266,6 +276,7 @@ dist_between_params(
 ### Install from source
 
 ``` r
+
 # Clone the repository and install locally
 install.packages("devtools")
 devtools::install_github("xsdm-project/xsdm-devel")

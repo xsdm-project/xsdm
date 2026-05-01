@@ -15,6 +15,7 @@ inspect results, and project them spatially.
 ## Setup
 
 ``` r
+
 library(xsdm)
 #> Package 'xsdm' version 1.0.0
 #> Type 'citation("xsdm")' for citing this R package in publications.
@@ -53,6 +54,7 @@ through the C++ engine, and returns both the per-start solutions and the
 best one.
 
 ``` r
+
 fit <- optimize_likelihood(
   env_dat     = example_1$env_array,
   occ         = example_1$occ_vec,
@@ -61,10 +63,9 @@ fit <- optimize_likelihood(
   control     = list(maxeval = 200),
   verbose     = FALSE
 )
-#>  ■■■■■                             12% |  ETA: 14s
-#>  ■■■■■■■■■                         25% |  ETA: 13s
-#>  ■■■■■■■■■■■■■■■■                  50% |  ETA:  9s
-#>  ■■■■■■■■■■■■■■■■■■■■              62% |  ETA:  6s
+#>  ■■■■■■■■■                         25% |  ETA: 10s
+#>  ■■■■■■■■■■■■■■■■                  50% |  ETA:  7s
+#>  ■■■■■■■■■■■■■■■■■■■■■■■           75% |  ETA:  3s
 #>  ■■■■■■■■■■■■■■■■■■■■■■■■■■■       88% |  ETA:  2s
 
 # Best solution and its log-likelihood
@@ -77,6 +78,7 @@ fit$best$full_par
 ## 2. Habitat-suitability projection
 
 ``` r
+
 # The `vsp` function projects the best-fit niche onto a raster grid.
 # Skipped at vignette-build time because terra requires a raster on disk.
 hs <- vsp(
@@ -89,6 +91,7 @@ hs <- vsp(
 ## 3. Profile likelihood
 
 ``` r
+
 # Profile the detection probability `pd` around the MLE.
 prof <- profile_likelihood(
   env_dat = example_1$env_array,

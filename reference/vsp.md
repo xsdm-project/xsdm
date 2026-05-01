@@ -74,19 +74,13 @@ env_data <- list(bio1 = bio1_ts, bio12 = bio12_ts)
 
 # Return a tibble (the default)
 prob_tbl <- vsp(env_data, example_1$par_list)
+#> Error in vsp(env_data, example_1$par_list): Assertion on 'env_data' failed: May only contain the following types: {SpatRaster}, but element 1 has type 'numeric'.
 head(prob_tbl)
-#> # A tibble: 6 × 3
-#>          x        y    probs
-#>      <dbl>    <dbl>    <dbl>
-#> 1 -1228723 1627222. 3.55e-13
-#> 2 -1223723 1627222. 1.01e-13
-#> 3 -1218723 1627222. 1.18e-13
-#> 4 -1213723 1627222. 2.46e-13
-#> 5 -1208723 1627222. 3.36e-14
-#> 6 -1203723 1627222. 1.28e-14
+#> Error: object 'prob_tbl' not found
 
 # Return a SpatRaster
 prob_rast <- vsp(env_data, example_1$par_list, return_raster = TRUE)
+#> Error in vsp(env_data, example_1$par_list, return_raster = TRUE): unused argument (return_raster = TRUE)
 # Quick plot (commented to avoid plotting in examples)
 # plot(prob_rast)
 # }
