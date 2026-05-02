@@ -7,10 +7,10 @@ src/*.o
 src/*.so
 src/*.dll
 ^sandbox$
-^data-raw$
+data-raw/
 R_debug
 ^ReumanAnnularVirtualSpecies$
-
+vignettes/articles/*.Rnw
 
 #directories
 ReumanAnnularVirtualSpecies/*

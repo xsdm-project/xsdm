@@ -280,7 +280,7 @@ install.packages("devtools")
 devtools::install_github("xsdm-project/xsdm-devel")
 ```
 
-### Reporting issues
+  ### Reporting issues
 
 Please file bugs and feature requests on the
 [GitHub issue tracker](https://github.com/xsdm-project/xsdm-devel/issues).
