@@ -7,6 +7,12 @@ reconstruct species' fundamental ecological niches and to project their
 potential geographic range. Data requirements include species
 presence/absence records and a timeseries of environmental data.
 
+## See also
+
+Useful links:
+
+- <https://xsdm-project.github.io/xsdm/>
+
 ## Author
 
 **Maintainer**: Angel Luis Robles Fernandez

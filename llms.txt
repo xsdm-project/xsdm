@@ -455,7 +455,8 @@ later](https://xsdm-project.github.io/xsdm/LICENSE.md).
   : Starting parameters for the optimization
 
 - [`vsp()`](https://xsdm-project.github.io/xsdm/reference/vsp.md) :
-  Generate a virtual species probability map
+  Generate a virtual species probability map with presence/absence
+  sampling
 
 - [`xsdm`](https://xsdm-project.github.io/xsdm/reference/xsdm-package.md)
   [`xsdm-package`](https://xsdm-project.github.io/xsdm/reference/xsdm-package.md)
@@ -467,5 +468,3 @@ later](https://xsdm-project.github.io/xsdm/LICENSE.md).
 
 - [End-to-end MLE workflow with
   xsdm](https://xsdm-project.github.io/xsdm/articles/optimize-likelihood-walkthrough.md):
-- [Unusable models: when a model does not have a maximum
-  likelihood](https://xsdm-project.github.io/xsdm/articles/unusable_models.md):

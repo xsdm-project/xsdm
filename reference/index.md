@@ -116,7 +116,8 @@
   : Starting parameters for the optimization
 
 - [`vsp()`](https://xsdm-project.github.io/xsdm/reference/vsp.md) :
-  Generate a virtual species probability map
+  Generate a virtual species probability map with presence/absence
+  sampling
 
 - [`xsdm`](https://xsdm-project.github.io/xsdm/reference/xsdm-package.md)
   [`xsdm-package`](https://xsdm-project.github.io/xsdm/reference/xsdm-package.md)
