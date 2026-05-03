@@ -136,7 +136,7 @@ suit
 #> coord. ref. : +proj=aea +lat_0=23 +lon_0=-96 +lat_1=29.5 +lat_2=45.5 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs 
 #> source(s)   : memory
 #> name        : habitat_suitability 
-#> min value   :           0.0000000 
-#> max value   :           0.8999711 
+#> min value   :       1.595298e-181 
+#> max value   :        8.643036e-01 
 # }
 ```
