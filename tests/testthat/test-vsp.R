@@ -70,17 +70,20 @@ test_that("vsp returns a tibble with correct structure, respects threshold, and 
   # Instead of expecting a warning, we verify that all sampled points have
   # probability > 0 (i.e., they come from the presence pool) and the total
   # number of rows equals size_pres (the presence sample size).
-  result3 <- vsp(
-    param_list    = example_1$par_list,
-    env_data      = env_data,
-    size_presence = size_pres,
-    size_absence  = size_abs,
-    threshold     = 0.0
+  expect_warning(
+    result3 <- vsp(
+      param_list    = example_1$par_list,
+      env_data      = env_data,
+      size_presence = size_pres,
+      size_absence  = size_abs,
+      threshold     = 0.0
+    ), regexp = "No cells available for absence sampling"
   )
+  
   pts3 <- terra::vect(result3[, c("lon", "lat")], geom = c("lon", "lat"))
-  prob_vals3 <- terra::extract(suit, pts3)[[1]]
+  prob_vals3 <- terra::extract(suit, pts3)[[2]]
   expect_true(all(prob_vals3 > 0))  # all points must have positive probability
-  expect_equal(nrow(result3), size_pres + size_abs)
+  expect_equal(nrow(result3), size_abs)
   
   # ---- 4. Sample size larger than available cells (warning + reduced sample) ----
   # Count number of cells with prob > 0.5 (presence pool)

@@ -2,72 +2,67 @@
 % Please edit documentation in R/vsp.R
 \name{vsp}
 \alias{vsp}
-\title{Generate a virtual species probability map}
+\title{Generate a virtual species probability map with presence/absence sampling}
 \usage{
-vsp(env_data, param_list, return_raster = FALSE)
+vsp(param_list, env_data, size_presence, size_absence, threshold = 0.5)
 }
 \arguments{
-\item{env_data}{A named list of time-series raster objects (e.g., bioclimatic
-variables). Each element should be a `SpatRaster` or similar object from the
-`terra` package.}
+\item{param_list}{A named list of biological‑scale parameters required by
+`log_prob_detect()`. Must include `mu`, `sigltil`, `sigrtil`, `ctil`, `pd`,
+and `o_mat`. Values like `sigltil`/`sigrtil` can be `Inf`.}
 
-\item{param_list}{A named list of parameters required by `log_prob_detect()`.
-Must include `mu`, `sigltil`, `sigrtil`, `ctil`, `pd`, and `o_mat`.
-This parameters are in biological scale. So for parameters like
-`sigltil`, `sigrtil` The values could be `Inf`}
+\item{env_data}{A named list of time‑series raster objects (e.g., from the
+`terra` package). Each element must be a `SpatRaster` with the same
+geometry and number of layers.}
 
-\item{return_raster}{Logical.If `FALSE`, returns a tibble with columns `x`, `y`, and
-`probs`. (Default)
-If `TRUE`, returns a `SpatRaster` object with
-probabilities.}
+\item{size_presence}{Integer. Number of sample points to draw from cells where
+the detection probability **exceeds** `threshold`.}
+
+\item{size_absence}{Integer. Number of sample points to draw from cells where
+the detection probability is **less than or equal to** `threshold`.}
+
+\item{threshold}{Numeric in `[0, 1]`. Probability cutoff used to distinguish
+presence vs. absence sampling areas. Default `0.5`.}
 }
 \value{
-Either:
-  * A tibble with coordinates and probability values by default
-  (if `return_raster = FALSE`) or
-  * A `SpatRaster` object (if `return_raster = TRUE`)
-  Both with values corresponding to the probability of detection for the
-  virtual species. Values range from 0 to 1
+A tibble with columns `lon`, `lat`, `occurrence` (0/1), where each row
+  corresponds to a sampled point. The presence/absence is drawn from a
+  binomial distribution using the habitat suitability value as the success
+  probability.
 }
 \description{
 Creates a virtual species probability-of-detection map based on environmental
-time-series data and a set of species-specific parameters.
+time-series data and a set of species-specific parameters, then samples
+presence/absence points based on a user-defined probability threshold.
 }
 \details{
-Internally, the function:
+Internally the function:
 \enumerate{
-  \item Converts the list of rasters into an array using `env_data_array()`.
-  \item Applies `log_prob_detect()` with the provided parameters.
-  \item Exponentiates the log-probabilities to obtain detection
-  probabilities.
+  \item Computes a habitat suitability raster using `habitat_suitability()`.
+  \item Splits the raster into two layers based on `threshold`:
+        cells with prob > threshold (presence pool) and ≤ threshold (absence pool).
+  \item Samples `size_presence` and `size_absence` points from each pool
+        (without replacement), with probabilities proportional to the suitability value.
+  \item Generates a binomial outcome for each sampled point using its suitability
+        as the probability of success.
 }
 }
 \examples{
 \donttest{
-# Load the consolidated example data (provided by the package)
 data("example_1", package = "xsdm")
-
-# Unpack the raster time series (they are stored as packed SpatRasters)
-bio1_ts  <- terra::unwrap(example_1$bio01)
-bio12_ts <- terra::unwrap(example_1$bio12)
-
-# Scale to match typical units (CHELSA data are often in 0.1 units)
-bio1_ts  <- bio1_ts / 100
-bio12_ts <- bio12_ts / 100
-
-# Build the list of environmental rasters
+bio1_ts  <- terra::unwrap(example_1$bio01) / 100
+bio12_ts <- terra::unwrap(example_1$bio12) / 100
 env_data <- list(bio1 = bio1_ts, bio12 = bio12_ts)
 
-# Return a tibble (the default)
-prob_tbl <- vsp(env_data, example_1$par_list)
-head(prob_tbl)
-
-# Return a SpatRaster
-prob_rast <- vsp(env_data, example_1$par_list, return_raster = TRUE)
-# Quick plot (commented to avoid plotting in examples)
-# plot(prob_rast)
+vsp(
+  param_list    = example_1$par_list,
+  env_data      = env_data,
+  size_presence = 100,
+  size_absence  = 100,
+  threshold     = 0.7
+)
 }
 }
 \seealso{
-[env_data_array()], [log_prob_detect()], [terra::rast()]
+[habitat_suitability()], [log_prob_detect()], [terra::spatSample()]
 }
