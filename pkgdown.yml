@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   articles/howToFit: howToFit.html
   optimize-likelihood-walkthrough: optimize-likelihood-walkthrough.html
-last_built: 2026-05-04T16:37Z
+last_built: 2026-05-04T16:40Z
 urls:
   reference: https://xsdm-project.github.io/xsdm/reference
   article: https://xsdm-project.github.io/xsdm/articles

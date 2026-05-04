@@ -66,7 +66,7 @@ fit <- optimize_likelihood(
 #>  ■■■■■                             12% |  ETA: 14s
 #>  ■■■■■■■■■■■■                      38% |  ETA: 11s
 #>  ■■■■■■■■■■■■■■■■                  50% |  ETA:  9s
-#>  ■■■■■■■■■■■■■■■■■■■■              62% |  ETA:  7s
+#>  ■■■■■■■■■■■■■■■■■■■■■■■           75% |  ETA:  4s
 #>  ■■■■■■■■■■■■■■■■■■■■■■■■■■■       88% |  ETA:  2s
 
 # Best solution and its log-likelihood
