@@ -2,9 +2,8 @@ pandoc: 3.6.3
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
-  articles/howToFit: howToFit.html
-  optimize-likelihood-walkthrough: optimize-likelihood-walkthrough.html
-last_built: 2026-05-04T16:26Z
+  howToFit: howToFit.html
+last_built: 2026-05-04T16:48Z
 urls:
   reference: https://xsdm-project.github.io/xsdm/reference
   article: https://xsdm-project.github.io/xsdm/articles
