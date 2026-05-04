@@ -32,7 +32,7 @@ str(example_1, max.level = 1)
 #>  $ bio12                   :Formal class 'PackedSpatRaster' [package "terra"] with 3 slots
 #>  $ env_array               : num [1:2000, 1:39, 1:2] 12.97 15.34 13.95 12.88 9.77 ...
 #>   ..- attr(*, "dimnames")=List of 3
-#>  $ occ_df                  :'data.frame':    2000 obs. of  4 variables:
+#>  $ occ_df                  :Classes 'tbl_df', 'tbl' and 'data.frame':    2000 obs. of  4 variables:
 #>  $ occ_vec                 : int [1:2000] 1 0 1 1 1 1 0 1 1 1 ...
 #>  $ optim_par_list          :List of 6
 #>  $ optim_par_vec_equivalent: Named num [1:9] 14.111 6.562 -2.252 0.296 -0.771 ...
@@ -66,7 +66,7 @@ fit <- optimize_likelihood(
 #>  ■■■■■                             12% |  ETA: 14s
 #>  ■■■■■■■■■■■■                      38% |  ETA: 11s
 #>  ■■■■■■■■■■■■■■■■                  50% |  ETA:  9s
-#>  ■■■■■■■■■■■■■■■■■■■■              62% |  ETA:  6s
+#>  ■■■■■■■■■■■■■■■■■■■■              62% |  ETA:  7s
 #>  ■■■■■■■■■■■■■■■■■■■■■■■■■■■       88% |  ETA:  2s
 
 # Best solution and its log-likelihood
