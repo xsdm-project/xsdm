@@ -8,7 +8,7 @@ vignette: >
 ---
 
 
-- 📄 [Download the PDF](articles/howToFit.pdf)
+- 📄 [Download the PDF](howToFit.pdf)
 
 <iframe
   src="howToFit.pdf"
