@@ -18,7 +18,8 @@
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/optimize-likelihood-walkthrough.html">End-to-end MLE workflow with xsdm</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/howToFit.html">How to Fit a xsdm model</a></li>
+    <li><a class="dropdown-item" href="../articles/_articles_draft/optimize-likelihood-walkthrough.html">End-to-end MLE workflow with xsdm</a></li>
   </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
@@ -54,7 +55,7 @@ SpatRaster with multiple layers).</p></dd>
 
 
 <dt id="arg-occ">occ<a class="anchor" aria-label="anchor" href="#arg-occ"></a></dt>
-<dd><p>Occurrence data frame. Should contain columns "name", "x", "y",
+<dd><p>Occurrence data frame. Should contain columns "name", "lon", "lat",
 "presence". If NULL, returns data for all raster cells.</p></dd>
 
 </dl></div>
@@ -78,63 +79,63 @@ SpatRaster with multiple layers).</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.1 lyr.2 lyr.3 lyr.4 lyr.5 lyr.6 lyr.7 lyr.8 lyr.9 lyr.10 lyr.11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]  1297  1307  1167  1179  1137  1170  1191  1093  1198   1252   1217</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]  1534  1559  1477  1465  1398  1439  1476  1396  1455   1485   1540</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]  1395  1415  1283  1294  1233  1272  1281  1201  1273   1360   1334</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]  1288  1313  1183  1190  1126  1168  1171  1103  1164   1260   1227</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]   977  1010   865   864   872   882   924   842   881   1025    886</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   979  1016   864   884   831   861   904   825   869    968    880</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   995  1066   887   893   839   864   934   876   890    978    888</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]  1006  1064   896   898   917   920   973   883   916   1050    900</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]  1139  1129  1005   994   963   988  1027   960   994   1117   1014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]  1020  1054   872   893   871   909   948   861   907   1020    876</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.12 lyr.13 lyr.14 lyr.15 lyr.16 lyr.17 lyr.18 lyr.19 lyr.20 lyr.21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   1179   1159   1174   1258   1261   1271   1013   1179   1198   1241</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   1465   1425   1463   1578   1558   1564   1356   1489   1427   1504</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   1281   1247   1302   1383   1379   1369   1152   1295   1293   1341</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1175   1134   1200   1279   1283   1263   1056   1186   1194   1233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    821    825    885    962   1004   1005    828    813    937    981</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    837    808    828    932    942    938    758    859    903    953</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    847    826    811    912    962    930    784    878    940    976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    860    847    930   1000   1024   1064    886    867    982   1036</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    991    952   1014   1100   1111   1094    904    979   1034   1056</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    843    842    911    974   1007   1041    869    862    953   1004</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.22 lyr.23 lyr.24 lyr.25 lyr.26 lyr.27 lyr.28 lyr.29 lyr.30 lyr.31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   1148   1186   1286   1099   1213   1228   1150   1156   1209   1177</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   1458   1449   1523   1415   1494   1529   1463   1453   1482   1477</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   1282   1321   1394   1225   1332   1320   1267   1253   1314   1273</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1182   1218   1290   1130   1234   1216   1163   1152   1216   1171</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    888    935    984    862    969    938    899    847    877    849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    883    913    980    826    903    924    855    814    845    881</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    912    920    985    847    939    961    863    824    830    889</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    958    999   1021    926   1007    974    966    875    901    861</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1023   1039   1105    983   1062   1042   1010    977   1041   1020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    941    985   1005    903    988    960    941    872    885    856</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.32 lyr.33 lyr.34 lyr.35 lyr.36 lyr.37 lyr.38 lyr.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   1203   1312   1135   1166   1162   1241   1258   1212</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   1547   1587   1432   1398   1410   1497   1520   1474</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   1320   1416   1241   1267   1264   1330   1366   1314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1213   1308   1134   1168   1163   1201   1269   1213</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    873    990    801    921    885    892    989    952</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    881    982    819    901    865    902    954    929</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    851    996    829    913    909    951    975    958</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    883   1047    823    969    928    921   1021   1000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1034   1129    963   1005    994   1000   1097   1052</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    873   1039    802    942    899    917   1001    983</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , var = bio12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.1 lyr.2 lyr.3 lyr.4 lyr.5 lyr.6 lyr.7 lyr.8 lyr.9 lyr.10 lyr.11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   236   318   301   257   372   485   543   465   478    304    440</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   295   527   344   270   593   579   570   473   526    351    365</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   207   300   348   323   430   507   573   507   441    273    418</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   226   339   357   368   448   567   597   528   525    281    439</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]   304   341   429   448   397   380   475   423   369    201    417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   283   362   432   351   426   566   548   436   485    345    471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   276   261   356   311   310   414   452   292   366    315    431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   303   339   438   347   346   445   450   343   311    160    320</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   327   381   397   391   463   478   585   418   512    280    457</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]   281   316   424   378   366   371   352   306   452    120    378</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.12 lyr.13 lyr.14 lyr.15 lyr.16 lyr.17 lyr.18 lyr.19 lyr.20 lyr.21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    481    335    379    527    383    421    635    465    515    435</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    714    419    443    279    301    386    646    436    514    413</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    522    381    327    472    346    436    698    433    525    430</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    562    409    337    495    341    466    713    413    507    422</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    390    435    464    447    385    386    518    472    350    352</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    573    426    422    469    323    392    515    366    342    331</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    453    323    378    445    316    344    397    349    370    277</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    314    363    314    238    261    220    399    462    308    303</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    556    436    411    505    301    475    557    450    350    414</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    275    330    183    240    263    174    385    291    416    228</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.22 lyr.23 lyr.24 lyr.25 lyr.26 lyr.27 lyr.28 lyr.29 lyr.30 lyr.31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    419    332    264    563    442    503    401    433    355    460</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    295    417    315    639    438    411    397    460    408    535</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    388    380    276    597    460    554    411    425    354    484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    417    419    289    592    493    607    425    471    369    524</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    378    377    277    297    363    431    439    432    318    426</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    277    267    226    403    421    410    377    349    374    400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    302    349    293    338    371    354    412    365    315    306</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    258    287    279    323    386    349    352    243    161    255</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    339    288    249    431    383    475    341    359    335    374</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    161    175    318    331    328    290    341    289    188    395</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.32 lyr.33 lyr.34 lyr.35 lyr.36 lyr.37 lyr.38 lyr.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    192    159    379    308    593    317    467    353</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    195    182    431    487    768    367    575    437</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    160    160    395    392    550    322    460    395</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    161    181    437    429    565    364    477    450</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    538    244    372    290    557    432    366    357</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    358    318    493    438    666    427    514    394</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    258    237    386    317    502    356    392    295</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    353    205    437    307    612    384    366    322</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    277    320    511    496    645    436    440    509</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    386    167    374    261    599    351    335    272</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="co"># Return all the environmental in the rasters</span></span></span>
 <span class="r-in"><span><span class="fu">env_data_array</span><span class="op">(</span><span class="va">env_data</span>, <span class="va">occ</span><span class="op">)</span></span></span>
@@ -142,63 +143,63 @@ SpatRaster with multiple layers).</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.1 lyr.2 lyr.3 lyr.4 lyr.5 lyr.6 lyr.7 lyr.8 lyr.9 lyr.10 lyr.11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]  1297  1307  1167  1179  1137  1170  1191  1093  1198   1252   1217</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]  1534  1559  1477  1465  1398  1439  1476  1396  1455   1485   1540</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]  1395  1415  1283  1294  1233  1272  1281  1201  1273   1360   1334</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]  1288  1313  1183  1190  1126  1168  1171  1103  1164   1260   1227</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]   977  1010   865   864   872   882   924   842   881   1025    886</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   979  1016   864   884   831   861   904   825   869    968    880</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   995  1066   887   893   839   864   934   876   890    978    888</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]  1006  1064   896   898   917   920   973   883   916   1050    900</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]  1139  1129  1005   994   963   988  1027   960   994   1117   1014</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]  1020  1054   872   893   871   909   948   861   907   1020    876</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.12 lyr.13 lyr.14 lyr.15 lyr.16 lyr.17 lyr.18 lyr.19 lyr.20 lyr.21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   1179   1159   1174   1258   1261   1271   1013   1179   1198   1241</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   1465   1425   1463   1578   1558   1564   1356   1489   1427   1504</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   1281   1247   1302   1383   1379   1369   1152   1295   1293   1341</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1175   1134   1200   1279   1283   1263   1056   1186   1194   1233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    821    825    885    962   1004   1005    828    813    937    981</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    837    808    828    932    942    938    758    859    903    953</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    847    826    811    912    962    930    784    878    940    976</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    860    847    930   1000   1024   1064    886    867    982   1036</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    991    952   1014   1100   1111   1094    904    979   1034   1056</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    843    842    911    974   1007   1041    869    862    953   1004</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.22 lyr.23 lyr.24 lyr.25 lyr.26 lyr.27 lyr.28 lyr.29 lyr.30 lyr.31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   1148   1186   1286   1099   1213   1228   1150   1156   1209   1177</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   1458   1449   1523   1415   1494   1529   1463   1453   1482   1477</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   1282   1321   1394   1225   1332   1320   1267   1253   1314   1273</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1182   1218   1290   1130   1234   1216   1163   1152   1216   1171</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    888    935    984    862    969    938    899    847    877    849</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    883    913    980    826    903    924    855    814    845    881</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    912    920    985    847    939    961    863    824    830    889</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    958    999   1021    926   1007    974    966    875    901    861</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1023   1039   1105    983   1062   1042   1010    977   1041   1020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    941    985   1005    903    988    960    941    872    885    856</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.32 lyr.33 lyr.34 lyr.35 lyr.36 lyr.37 lyr.38 lyr.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   1203   1312   1135   1166   1162   1241   1258   1212</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   1547   1587   1432   1398   1410   1497   1520   1474</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   1320   1416   1241   1267   1264   1330   1366   1314</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1213   1308   1134   1168   1163   1201   1269   1213</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    873    990    801    921    885    892    989    952</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    881    982    819    901    865    902    954    929</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    851    996    829    913    909    951    975    958</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    883   1047    823    969    928    921   1021   1000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   1034   1129    963   1005    994   1000   1097   1052</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    873   1039    802    942    899    917   1001    983</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> , , var = bio12</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.1 lyr.2 lyr.3 lyr.4 lyr.5 lyr.6 lyr.7 lyr.8 lyr.9 lyr.10 lyr.11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   236   318   301   257   372   485   543   465   478    304    440</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   295   527   344   270   593   579   570   473   526    351    365</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   207   300   348   323   430   507   573   507   441    273    418</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   226   339   357   368   448   567   597   528   525    281    439</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]   304   341   429   448   397   380   475   423   369    201    417</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]   283   362   432   351   426   566   548   436   485    345    471</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]   276   261   356   311   310   414   452   292   366    315    431</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]   303   339   438   347   346   445   450   343   311    160    320</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]   327   381   397   391   463   478   585   418   512    280    457</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]   281   316   424   378   366   371   352   306   452    120    378</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.12 lyr.13 lyr.14 lyr.15 lyr.16 lyr.17 lyr.18 lyr.19 lyr.20 lyr.21</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    481    335    379    527    383    421    635    465    515    435</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    714    419    443    279    301    386    646    436    514    413</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    522    381    327    472    346    436    698    433    525    430</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    562    409    337    495    341    466    713    413    507    422</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    390    435    464    447    385    386    518    472    350    352</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    573    426    422    469    323    392    515    366    342    331</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    453    323    378    445    316    344    397    349    370    277</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    314    363    314    238    261    220    399    462    308    303</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    556    436    411    505    301    475    557    450    350    414</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    275    330    183    240    263    174    385    291    416    228</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.22 lyr.23 lyr.24 lyr.25 lyr.26 lyr.27 lyr.28 lyr.29 lyr.30 lyr.31</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    419    332    264    563    442    503    401    433    355    460</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    295    417    315    639    438    411    397    460    408    535</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    388    380    276    597    460    554    411    425    354    484</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    417    419    289    592    493    607    425    471    369    524</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    378    377    277    297    363    431    439    432    318    426</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    277    267    226    403    421    410    377    349    374    400</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    302    349    293    338    371    354    412    365    315    306</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    258    287    279    323    386    349    352    243    161    255</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    339    288    249    431    383    475    341    359    335    374</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    161    175    318    331    328    290    341    289    188    395</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       time</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        lyr.32 lyr.33 lyr.34 lyr.35 lyr.36 lyr.37 lyr.38 lyr.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    192    159    379    308    593    317    467    353</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    195    182    431    487    768    367    575    437</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    160    160    395    392    550    322    460    395</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    161    181    437    429    565    364    477    450</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    538    244    372    290    557    432    366    357</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,]    358    318    493    438    666    427    514    394</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [2,]    258    237    386    317    502    356    392    295</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [3,]    353    205    437    307    612    384    366    322</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [4,]    277    320    511    496    645    436    440    509</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [5,]    386    167    374    261    599    351    335    272</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>

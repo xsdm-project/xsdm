@@ -43,7 +43,7 @@ vsp(param_list, env_data, size_presence, size_absence, threshold = 0.5)
 
 ## Value
 
-A tibble with columns \`lon\`, \`lat\`, \`occurrence\` (0/1), where each
+A tibble with columns \`lon\`, \`lat\`, \`presence\` (0/1), where each
 row corresponds to a sampled point. The presence/absence is drawn from a
 binomial distribution using the habitat suitability value as the success
 probability.
@@ -87,18 +87,18 @@ vsp(
   threshold     = 0.7
 )
 #> # A tibble: 200 × 3
-#>         lon      lat occurrence
-#>       <dbl>    <dbl>      <int>
-#>  1  -873723 1417222.          1
-#>  2 -1083723 1427222.          1
-#>  3 -1113723 1392222.          1
-#>  4 -1083723 1252222.          0
-#>  5 -1138723 1397222.          1
-#>  6  -748723 1627222.          0
-#>  7  -758723 1552222.          1
-#>  8  -853723 1532222.          1
-#>  9 -1158723 1287222.          1
-#> 10  -793723 1532222.          1
+#>         lon      lat presence
+#>       <dbl>    <dbl>    <int>
+#>  1  -873723 1417222.        1
+#>  2 -1083723 1427222.        1
+#>  3 -1113723 1392222.        1
+#>  4 -1083723 1252222.        0
+#>  5 -1138723 1397222.        1
+#>  6  -748723 1627222.        0
+#>  7  -758723 1552222.        1
+#>  8  -853723 1532222.        1
+#>  9 -1158723 1287222.        1
+#> 10  -793723 1532222.        1
 #> # ℹ 190 more rows
 # }
 ```
