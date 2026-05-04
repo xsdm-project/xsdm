@@ -26,12 +26,12 @@ test_that("vsp returns a tibble with correct structure, respects threshold, and 
   
   # Output structure
   expect_true(tibble::is_tibble(result))
-  expect_named(result, c("lon", "lat", "occurrence"))
+  expect_named(result, c("lon", "lat", "presence"))
   expect_type(result$lon, "double")
   expect_type(result$lat, "double")
-  expect_type(result$occurrence, "integer")
+  expect_type(result$presence, "integer")
   expect_equal(nrow(result), size_pres + size_abs)
-  expect_true(all(result$occurrence %in% c(0L, 1L)))
+  expect_true(all(result$presence %in% c(0L, 1L)))
   
   # Verify threshold split
   suit <- habitat_suitability(

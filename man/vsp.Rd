@@ -25,7 +25,7 @@ the detection probability is **less than or equal to** `threshold`.}
 presence vs. absence sampling areas. Default `0.5`.}
 }
 \value{
-A tibble with columns `lon`, `lat`, `occurrence` (0/1), where each row
+A tibble with columns `lon`, `lat`, `presence` (0/1), where each row
   corresponds to a sampled point. The presence/absence is drawn from a
   binomial distribution using the habitat suitability value as the success
   probability.

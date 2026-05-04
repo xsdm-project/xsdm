@@ -17,7 +17,7 @@
 #' @param threshold Numeric in `[0, 1]`. Probability cutoff used to distinguish
 #'   presence vs. absence sampling areas. Default `0.5`.
 #'
-#' @return A tibble with columns `lon`, `lat`, `occurrence` (0/1), where each row
+#' @return A tibble with columns `lon`, `lat`, `presence` (0/1), where each row
 #'   corresponds to a sampled point. The presence/absence is drawn from a
 #'   binomial distribution using the habitat suitability value as the success
 #'   probability.
@@ -129,7 +129,7 @@ vsp <- function(param_list, env_data, size_presence, size_absence, threshold = 0
   # Combine and rename columns
   occ_df <- rbind(presence_pts, absence_pts)
   if (nrow(occ_df) > 0) {
-    names(occ_df) <- c("lon", "lat", "occurrence")
+    names(occ_df) <- c("lon", "lat", "presence")
   } else {
     # Create an empty data frame with correct column names
     occ_df <- data.frame(lon = numeric(0), lat = numeric(0), occurrence = integer(0))

@@ -20,4 +20,5 @@
 ^src/.*\.so$
 ^src/.*\.o$
 ^src/.*\.obj$
+inst/articles/
 data-raw/

@@ -10,7 +10,7 @@ env_data_array(env_data, occ = NULL)
 \item{env_data}{List of environmental variables time series stacks (each a
 SpatRaster with multiple layers).}
 
-\item{occ}{Occurrence data frame. Should contain columns "name", "x", "y",
+\item{occ}{Occurrence data frame. Should contain columns "name", "lon", "lat",
 "presence". If NULL, returns data for all raster cells.}
 }
 \value{

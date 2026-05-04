@@ -8,10 +8,13 @@ src/*.so
 src/*.dll
 ^sandbox$
 data-raw/
+vignettes/_article/
 R_debug
 ^ReumanAnnularVirtualSpecies$
 vignettes/articles/*.Rnw
-
+vignettes/_articlesa_draft/
+cache/
+figure
 #directories
 ReumanAnnularVirtualSpecies/*
 sandbox/*
