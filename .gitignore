@@ -57,3 +57,4 @@ manual/**/*.Rnw~        # editor backups if any
 .Rproj.user
 *.tar.gz
 
+docs
