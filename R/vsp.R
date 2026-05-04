@@ -118,7 +118,7 @@ vsp <- function(param_list, env_data, size_presence, size_absence, threshold = 0
   # Generate binomial outcomes
   generate_binom <- function(pts) {
     if (nrow(pts) == 0) return(pts)
-    pts$occurrence <- rbinom(nrow(pts), size = 1, prob = pts$prob)
+    pts$occurrence <- stats::rbinom(nrow(pts), size = 1, prob = pts$prob)
     pts$prob <- NULL  # remove the probability column
     return(pts)
   }
