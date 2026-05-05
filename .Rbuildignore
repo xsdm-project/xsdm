@@ -21,6 +21,7 @@
 ^src/.*\.o$
 ^src/.*\.obj$
 inst/articles/
+inst/articles/*.pdf
 data-raw/
 vignettes/_articles_draft/
 vignettes/articles/
