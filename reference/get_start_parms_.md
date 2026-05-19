@@ -20,3 +20,7 @@ get_start_parms_(ranges, numstarts = 100)
 - numstarts:
 
   The number of require samples
+
+## Value
+
+A tibble with one row per starting point and one column per parameter.

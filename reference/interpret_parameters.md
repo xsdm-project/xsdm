@@ -107,7 +107,7 @@ in the bivariate plot carry no units of their own.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \donttest{
   # Two-panel (presence vs non-detection) plot with auto-derived limits
   interpret_parameters(
     example_1$par_list,
@@ -115,6 +115,7 @@ if (FALSE) { # \dontrun{
     env_dat      = example_1$env_array,
     occ          = example_1$occ_vec
   )
+
 
   # Narrower auto-derived window
   interpret_parameters(
@@ -125,5 +126,6 @@ if (FALSE) { # \dontrun{
     breadth      = 0.7
   )
 
-} # }
+
+# }
 ```

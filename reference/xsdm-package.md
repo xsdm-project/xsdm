@@ -13,6 +13,10 @@ Useful links:
 
 - <https://xsdm-project.github.io/xsdm/>
 
+- <https://xsdm-project.github.io/xsdm-devel/>
+
+- Report bugs at <https://github.com/xsdm-project/xsdm-devel/issues>
+
 ## Author
 
 **Maintainer**: Angel Luis Robles Fernandez

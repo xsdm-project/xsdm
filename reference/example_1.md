@@ -11,7 +11,7 @@ example_1
 
 ## Format
 
-A list of 11 objects:
+A list of 12 objects:
 
 - `par_vec`:
 
@@ -84,7 +84,9 @@ A list of 11 objects:
 
 ## Source
 
-Berti e al, 2024 (\<https://doi.org/10.1101/2024.10.30.621023\>)
+Berti et al., 2025
+([doi:10.1101/2024.10.30.621023](https://doi.org/10.1101/2024.10.30.621023)
+)
 
 ## Details
 

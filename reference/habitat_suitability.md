@@ -6,7 +6,7 @@ probability of detection) for every cell of a list of multi-layer
 objects, processing the inputs in memory-bounded blocks so that
 arbitrarily large grids can be handled without loading the entire
 dataset into R memory. Each block is forwarded to
-[`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm/reference/log_prob_detect_cpp.md),
+[`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm-devel/reference/log_prob_detect_cpp.md),
 the xtensor-backed C++ kernel that consolidates the
 `like_neg_ltsgr() -> like_ltsg()` call chain.
 
@@ -30,7 +30,7 @@ habitat_suitability(
 
   A named list of biological-scale parameters. Must contain `mu`,
   `sigltil`, `sigrtil`, `o_mat`, `ctil` and `pd`. See
-  [`log_prob_detect`](https://xsdm-project.github.io/xsdm/reference/log_prob_detect.md)
+  [`log_prob_detect`](https://xsdm-project.github.io/xsdm-devel/reference/log_prob_detect.md)
   for details of each element.
 
 - env_list:
@@ -60,7 +60,7 @@ habitat_suitability(
 - threads:
 
   Integer scalar. Number of parallel threads forwarded to
-  [`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm/reference/log_prob_detect_cpp.md).
+  [`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm-devel/reference/log_prob_detect_cpp.md).
   Use `0` (default) to let RcppParallel pick the number of threads
   automatically.
 
@@ -92,7 +92,7 @@ Internally the function uses terra's streaming block-loop API:
     [`readValues`](https://rspatial.github.io/terra/reference/readwrite.html)
     reads a horizontal strip from every input raster into a matrix; the
     strips are packed into a flat column-major vector and passed to
-    [`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm/reference/log_prob_detect_cpp.md).
+    [`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm-devel/reference/log_prob_detect_cpp.md).
     Cells that are NA in any variable or time step are masked out and
     re-inserted as NA in the output.
 
@@ -110,9 +110,9 @@ function suitable for continental or global rasters.
 
 ## See also
 
-[`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm/reference/log_prob_detect_cpp.md),
-[`log_prob_detect`](https://xsdm-project.github.io/xsdm/reference/log_prob_detect.md),
-[`vsp`](https://xsdm-project.github.io/xsdm/reference/vsp.md),
+[`log_prob_detect_cpp`](https://xsdm-project.github.io/xsdm-devel/reference/log_prob_detect_cpp.md),
+[`log_prob_detect`](https://xsdm-project.github.io/xsdm-devel/reference/log_prob_detect.md),
+[`vsp`](https://xsdm-project.github.io/xsdm-devel/reference/vsp.md),
 [`writeStart`](https://rspatial.github.io/terra/reference/readwrite.html)
 
 ## Examples

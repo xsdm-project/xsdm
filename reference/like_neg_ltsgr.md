@@ -66,7 +66,7 @@ Internally, this function:
 2.  Computes inverse (diagonal) matrices for asymmetry adjustments.
 
 3.  Calls the C++ function
-    [`like_ltsg()`](https://xsdm-project.github.io/xsdm/reference/like_ltsg.md)
+    [`like_ltsg()`](https://xsdm-project.github.io/xsdm-devel/reference/like_ltsg.md)
     for efficient likelihood computation.
 
 ## Note
