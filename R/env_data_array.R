@@ -21,9 +21,6 @@
 #' # Return all the environmental in the rasters
 #' env_data_array(env_data, occ)
 env_data_array <- function(env_data, occ = NULL) {
-  if (!requireNamespace("terra", quietly = TRUE)) {
-    stop("Package 'terra' is required for this function. Install it with install.packages('terra').")
-  }
   checkmate::assert_list(env_data,
     any.missing = FALSE,
     null.ok = FALSE,
@@ -48,10 +45,13 @@ env_data_array <- function(env_data, occ = NULL) {
     checkmate::assert_names(names(occ),
       must.include = c("lon", "lat", "presence")
     )
-    pts <- terra::vect(occ, geom = c("lon", "lat"))
+    pts <- terra::vect(as.data.frame(occ), geom = c("lon", "lat"))
   } else {
     pts <- NULL
   }
+  
+  occ <- as.data.frame(occ)
+  
   # Helper to extract data: returns matrix M x N (or C x N)
   extract_one <- function(r, pts) {
     if (!is.null(pts)) {

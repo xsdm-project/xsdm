@@ -3,7 +3,7 @@
 #' A named list containing all example datasets used in the package's
 #' documentation and examples.
 #'
-#' @format A list of 11 objects:
+#' @format A list of 12 objects:
 #' \describe{
 #'   \item{\code{par_vec}}{Named numeric vector of length 9. Math-scale
 #'     parameters for a 2‑variable model (p = 2). Canonical names:
@@ -66,5 +66,5 @@
 #' # Use a parameter set
 #' math_to_bio(example_1$par_vec)
 #'
-#' @source Berti e al,  2024 (<https://doi.org/10.1101/2024.10.30.621023>)
+#' @source Berti et al., 2025 (\doi{10.1101/2024.10.30.621023})
 "example_1"

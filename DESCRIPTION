@@ -30,7 +30,7 @@ Imports:
     furrr,
     future,
     future.callr,
-    pomp,
+    sobol,
     purrr
 LinkingTo: Rcpp, RcppParallel, ucminfcpp
 SystemRequirements: GNU make, C++17
@@ -46,4 +46,6 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
-URL: https://xsdm-project.github.io/xsdm/
+URL: https://xsdm-project.github.io/xsdm/, https://xsdm-project.github.io/xsdm-devel/
+BugReports: https://github.com/xsdm-project/xsdm-devel/issues
+Config/testthat/edition: 3

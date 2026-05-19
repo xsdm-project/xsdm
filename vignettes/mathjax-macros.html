@@ -1,0 +1,38 @@
+<!-- MathJax v2 macros (text/x-mathjax-config is processed only by v2) -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    equationNumbers: { autoNumber: "AMS" },
+    Macros: {
+      mean: ["{\\overline{#1}}", 1],
+      ltsgr: "{\\text{ltsgr}}",
+      expit: "{\\text{expit}}",
+      logit: "{\\text{logit}}",
+      E: "{\\text{E}}",
+      Rp: "{\\text{Re}}",
+      "var": "{\\text{var}}",
+      cov: "{\\text{cov}}",
+      cor: "{\\text{cor}}"
+    }
+  }
+});
+</script>
+<!-- MathJax v3 macros (runs before MathJax script in pandoc >= 2.17) -->
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams',
+    macros: {
+      mean: ["{\\overline{#1}}", 1],
+      ltsgr: "{\\text{ltsgr}}",
+      expit: "{\\text{expit}}",
+      logit: "{\\text{logit}}",
+      E: "{\\text{E}}",
+      Rp: "{\\text{Re}}",
+      "var": "{\\text{var}}",
+      cov: "{\\text{cov}}",
+      cor: "{\\text{cor}}"
+    }
+  }
+};
+</script>

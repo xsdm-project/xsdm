@@ -5,7 +5,7 @@
 \alias{example_1}
 \title{Consolidated example data for the xsdm package}
 \format{
-A list of 11 objects:
+A list of 12 objects:
 \describe{
   \item{\code{par_vec}}{Named numeric vector of length 9. Math-scale
     parameters for a 2‑variable model (p = 2). Canonical names:
@@ -47,7 +47,7 @@ A list of 11 objects:
 }
 }
 \source{
-Berti e al,  2024 (<https://doi.org/10.1101/2024.10.30.621023>)
+Berti et al., 2025 (\doi{10.1101/2024.10.30.621023})
 }
 \usage{
 example_1

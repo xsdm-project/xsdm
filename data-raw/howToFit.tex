@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+
+% --- Packages for math & formatting ---
+\usepackage{amsmath, amssymb, amsthm} % advanced math
+\usepackage{listings}                  % code formatting
+\usepackage{xcolor}                     % color for code
+\usepackage{graphicx}                   % include figures
+\usepackage{hyperref}                   % clickable links
+\usepackage{authblk}                    % author affiliations
+\usepackage[margin=1in]{geometry}
+\usepackage{fvextra} % better verbatim with line wrapping
+\usepackage{float}
+
+% --- Configure code display ---
+\lstset{
+  language=R,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  stepnumber=1,
+  numbersep=5pt,
+  frame=single,
+  backgroundcolor=\color{gray!10},
+  breaklines=true,
+  captionpos=b
+}
+
+% --- Theorem environment ---
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+% --- New commands ---
+\newcommand*\mean[1]{\overline{#1}}
+\newcommand{\var}{\text{var}}
+\newcommand{\cov}{\text{cov}}
+\newcommand{\cor}{\text{cor}}
+\newcommand{\Rp}{\text{Re}}
+\newcommand{\E}{\text{E}}
+\newcommand{\ltsgr}{\text{ltsgr}}
+\newcommand{\expit}{\text{expit}}
+\newcommand{\logit}{\text{logit}}
+
+% --- Header material ---
+\title{How to fit models with species occurrence data using \texttt{xsdm}}
+\author[1]{Daniel C. Reuman}
+\author[1]{Angel Lu\'{i}s Robles Fern\'{a}ndez}
+\affil[1]{Department of Ecology and Evolutionary Biology and Center for Ecological Research,
+University of Kansas}
+\date{}
+
+% --- Make Sweave code/output blocks obey text margins and wrap nicely ---
+\DefineVerbatimEnvironment{Sinput}{Verbatim}{
+  fontsize=\small,
+  xleftmargin=0pt,
+  xrightmargin=0pt,
+  breaklines=true,
+  breakanywhere=true,
+  commandchars=\\\{\}
+}
+
+\DefineVerbatimEnvironment{Soutput}{Verbatim}{
+  fontsize=\small,
+  xleftmargin=0pt,
+  xrightmargin=0pt,
+  breaklines=true,
+  breakanywhere=true,
+  commandchars=\\\{\}
+}
+
+% Optional: if you have Scode blocks too
+\DefineVerbatimEnvironment{Scode}{Verbatim}{
+  fontsize=\small,
+  xleftmargin=0pt,
+  xrightmargin=0pt,
+  breaklines=true,
+  breakanywhere=true,
+  commandchars=\\\{\}
+}
+
+% --- start the doc ---
+\usepackage{Sweave}
+\begin{document}
+\input{howToFit-concordance}
+
+\begin{Schunk}
+\begin{Sinput}
+> knitr::opts_chunk$set(
++   echo=TRUE,
++   message=FALSE,
++   warning=FALSE,
++   cache=FALSE
++ )
+\end{Sinput}
+\end{Schunk}
+
+\maketitle
+
+\begin{abstract}
+\noindent After reading the document entitled "The xsdm model", this document
+introduces the statistically and computationally sophisticated user to the 
+main functions of the \texttt{xsdm} package. The package implements a frequentist 
+analysis of the xsdm model. This document should get the user to the point
+of maximizing the likelihood of the model and profiling in ``easy'' cases, 
+with callouts to
+several troubleshooting documents about what to do when the process does
+not go smoothly. Alternative fitted models can also be compared by AIC or another
+criterion. The example worked out here is for a virtual species (i.e., generated 
+data), so we also demonstrate that fitting an xsdm model can recover the true
+parameters if model mis-specification is not an issue.
+\end{abstract}
+
+\section{Introduction to the running example used throughout this document}
+
+This manual uses a small built-in example included with the \texttt{xsdm} R 
+package to illustrate a baseline workflow. The example contains (i) an
+occurrence table for a virtual species, and (ii) two environmental
+\texttt{terra} raster time series representing CHELSA-derived 
+bioclimatic variables for a region of interest over 39 years.
+
+Load the data and get oriented to the first bioclimatic variable, which is mean annual temperature
+in units of $100 \times ^\circ$C for 39 years for a particular region of interest. 
+And make it units of $^\circ$C: 
+\begin{Schunk}
+\begin{Sinput}
+> library(xsdm)
+> library(terra)

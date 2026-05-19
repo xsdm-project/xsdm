@@ -1,18 +1,15 @@
-citHeader("To cite xsdm in publications use:")
-
 bibentry(
-  bibtype = "Manual",
-  title   = "{xsdm}: Demographic Approach to Species Distribution Models",
-  author  = c(
-    person("Emilio",   "Berti",
-           comment = c(ORCID = "0000-0001-9286-011X")),
-    person("Daniel C.", "Reuman",
-           comment = c(ORCID = "0000-0002-1407-8947")),
-    person("Angel Luis", "Robles Fernandez",
-           comment = c(ORCID = "0000-0002-4674-4270"))
+  bibtype  = "Article",
+  title    = "The impacts of climate variability on the niche concept and distributions of species",
+  author   = c(
+    person("Emilio", "Berti"),
+    person("Angel Luis", "Robles Fern\u00e1ndez"),
+    person("Benjamin", "Rosenbaum"),
+    person("A. Townsend", "Peterson"),
+    person("Jorge", "Sober\u00f3n"),
+    person("Daniel C.", "Reuman")
   ),
-  year    = format(Sys.Date(), "%Y"),
-  note    = sprintf("R package version %s",
-                    utils::packageVersion("xsdm")),
-  url     = "https://github.com/xsdm-project/xsdm-devel"
+  journal  = "bioRxiv",
+  year     = "2025",
+  doi      = "10.1101/2024.10.30.621023"
 )

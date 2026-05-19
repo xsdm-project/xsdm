@@ -1,5 +1,5 @@
 #' Consolidated example data for the xsdm.
-#' This is environmental data array  an occurence presence absence vector
+#' This is environmental data array and an occurrence presence absence vector
 #' Blarina carolinensis
 #' A named list containing all example datasets used in the package's
 #' documentation and examples.
@@ -18,5 +18,5 @@
 #' # Access the list
 #' names(example_3)
 #'
-#' @source Berti e al,  2024 (<https://doi.org/10.1101/2024.10.30.621023>)
+#' @source Berti et al., 2025 (\doi{10.1101/2024.10.30.621023})
 "example_3"

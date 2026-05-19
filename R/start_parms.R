@@ -196,17 +196,13 @@ get_range_df_ <- function(env_dat,
 #' of parameters
 #' @param numstarts The number of require samples
 #'
+#' @return A tibble with one row per starting point and one column per
+#'   parameter.
 #' @keywords internal
 get_start_parms_ <- function(ranges, numstarts = 100) {
-  if (!requireNamespace("pomp", quietly = TRUE)) {
-    stop("Package 'pomp' is required for this function. Install it with install.packages('pomp').")
-  }
-  if (!requireNamespace("tibble", quietly = TRUE)) {
-    stop("Package 'tibble' is required for this function. Install it with install.packages('tibble').")
-  }
   # Check parameters. numstarts must be >= 3: we call
-  # pomp::sobol_design(..., nseq = numstarts - 1) and then append the
-  # data-driven center row. nseq = 0 segfaults pomp, nseq = 1 returns a
+  # sobol::sobol_design(..., nseq = numstarts - 1) and then append the
+  # data-driven center row. nseq = 0 segfaults, nseq = 1 returns a
   # vector instead of a matrix and downstream colnames<- fails.
   checkmate::assert_data_frame(ranges, any.missing = FALSE, ncols = 3)
   checkmate::assert_integerish(numstarts, lower = 3, any.missing = FALSE,
@@ -224,19 +220,16 @@ get_start_parms_ <- function(ranges, numstarts = 100) {
   names(upper) <- rownames(ranges)
   
   # Get the actual start parameters, math scale
-  if (!requireNamespace("pomp", quietly = TRUE)) {
-    stop("Package 'pomp' is required for get_start_parms_(). Install it with: install.packages('pomp')")
-  }
-  startparms_math <- pomp::sobol_design(
+  startparms_math <- sobol::sobol_design(
     lower = lower,
     upper = upper,
     nseq = numstarts - 1
   )
-  # Defensive coercion: pomp::sobol_design has historically returned a
-  # bare numeric vector (instead of a data.frame) for very small nseq.
-  # The validation above already rules out nseq < 2, but the cast keeps
-  # us safe against future pomp behavior changes and produces a clearer
-  # error if the contract ever drifts.
+  # Defensive coercion: sobol::sobol_design may return a bare numeric
+  # vector (instead of a data.frame) for very small nseq. The validation
+  # above already rules out nseq < 2, but the cast keeps us safe against
+  # future behavior changes and produces a clearer error if the contract
+  # ever drifts.
   if (!is.data.frame(startparms_math) && !is.matrix(startparms_math)) {
     startparms_math <- as.data.frame(
       matrix(startparms_math, nrow = numstarts - 1L,
@@ -292,7 +285,7 @@ start_parms <- function(env_dat,
                         num_starts = 100) {
   check_env_array(env_dat)
   checkmate::assert_numeric(breadth ,  null.ok = FALSE, )
-  # num_starts >= 3 is required: pomp::sobol_design (called by
+  # num_starts >= 3 is required: sobol::sobol_design (called by
   # get_start_parms_) needs nseq = num_starts - 1 >= 2.
   checkmate::assert_integerish(num_starts, lower = 3, any.missing = FALSE,
                                len = 1)
