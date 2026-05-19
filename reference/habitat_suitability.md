@@ -129,14 +129,14 @@ suit <- habitat_suitability(
   return_prob = TRUE
 )
 suit
-#> class       : SpatRaster 
+#> class       : SpatRaster
 #> size        : 128, 123, 1  (nrow, ncol, nlyr)
 #> resolution  : 5000, 5000  (x, y)
 #> extent      : -1231223, -616223, 989721.9, 1629722  (xmin, xmax, ymin, ymax)
-#> coord. ref. : +proj=aea +lat_0=23 +lon_0=-96 +lat_1=29.5 +lat_2=45.5 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs 
+#> coord. ref. : +proj=aea +lat_0=23 +lon_0=-96 +lat_1=29.5 +lat_2=45.5 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs
 #> source(s)   : memory
-#> name        : habitat_suitability 
-#> min value   :       1.595298e-181 
-#> max value   :        8.643036e-01 
+#> name        : habitat_suitability
+#> min value   :                   0
+#> max value   :            0.864304
 # }
 ```
