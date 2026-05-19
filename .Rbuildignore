@@ -25,3 +25,4 @@ inst/articles/*.pdf
 data-raw/
 vignettes/_articles_draft/
 vignettes/articles/
+docs/
