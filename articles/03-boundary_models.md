@@ -6,12 +6,12 @@
 \newcommand{\ltsgr}{\text{ltsgr}} \newcommand{\expit}{\text{expit}}
 \newcommand{\logit}{\text{logit}} \\
 
-**Abstract.** We here show a troublshooting example in the case where
-the best model considered does not show adequate evidence that the
-likelihood function was fully optimized, the best parameters obtained by
-optimization show \\p_d\\ close to \\1\\, and the profile for \\p_d\\ is
-not dome shaped. This is a common case. The boundary model with \\p_d =
-1\\ is used. This example is based on occurrence data from GBIF for
+**Abstract.** We here show an example of the not uncommon case where the
+seemingly best initial model considered does not show adequate evidence
+that the likelihood function was fully optimized; the best parameters
+obtained by optimization show \\p_d\\ close to \\1\\; and the profile
+for \\p_d\\ is not dome shaped. The boundary model with \\p_d = 1\\ can
+then be used. This example is based on occurrence data from GBIF for
 *Blarina carolinensis*, the southern short-tailed shrew.
 
 The southern short-tailed shrew, *Blarina carolinensis*, is found in the
@@ -54,20 +54,20 @@ is precipitation of the wettest quarter, and BIO17 is precipitation of
 the driest quarter.
 
 Now look at the distributions of values of environmental variables to
-make sure they are not on wildly different scales, which would cause
+make sure they are not on wildly different scales, which could cause
 problems for optimization:
 
 ``` r
 
-apply(FUN=quantile, X=env_array, MARGIN=3,prob=c(.025,.25,.5,.75,.975))
+apply(FUN=quantile, X=env_array, MARGIN=3, prob=c(.025,.25,.5,.75,.975))
 ```
 
-    ##          BIO01    BIO10     BIO11     BIO12    BIO16     BIO17
-    ## 2.5%  11.61870 21.70901  1.477658  76.36044  9.12790  2.133369
-    ## 25%   15.31648 25.24791  6.289062 108.62843 13.18716  4.505094
-    ## 50%   17.16010 26.45451  9.055910 126.29746 15.76004  5.947245
-    ## 75%   19.20414 27.43751 11.991494 146.79118 18.83666  7.377723
-    ## 97.5% 22.55861 29.21995 17.613174 190.28207 27.04961 10.422263
+    ##          BIO01 BIO10 BIO11     BIO12 BIO16   BIO17
+    ## 2.5%  11.62000 21.71  1.48  76.36075  9.13  2.1300
+    ## 25%   15.32000 25.25  6.29 108.63000 13.19  4.5075
+    ## 50%   17.16000 26.45  9.06 126.30000 15.76  5.9500
+    ## 75%   19.20000 27.44 11.99 146.79000 18.84  7.3800
+    ## 97.5% 22.55925 29.22 17.61 190.28000 27.05 10.4200
 
 These distributions look basically OK.
 
@@ -94,11 +94,11 @@ all_model_results <- list()
 for (i in 1:nrow(models))
 {
   env_dat <- env_array[,,models[i,]==1,drop=FALSE]
-  starts <- xsdm::start_parms(env_dat,num_starts=25)
+  starts <- start_parms(env_dat[occ==1,,,drop=FALSE],num_starts=25)
   all_optim_results <- list()
   for (j in 1:nrow(starts))
   {
-    all_optim_results[[j]] <- optim(par=starts[j,],fn=xsdm::loglik_math,
+    all_optim_results[[j]] <- optim(par=starts[j,],fn=loglik_math,
                                    method="BFGS",
                                    env_dat=env_dat, occ=occ,negative=TRUE,
                                    control=list(trace=0))
@@ -123,7 +123,7 @@ model_BICs <- sapply(X=all_model_results,
                     )
 ```
 
-Also by AIC:
+Also by AIC, and compare the two:
 
 ``` r
 
@@ -140,11 +140,11 @@ rbind(model_BICs[inds],model_AICs[inds])
 ```
 
     ##          [,1]     [,2]     [,3]     [,4]     [,5]     [,6]     [,7]     [,8]
-    ## [1,] 1165.031 1172.509 1175.884 1190.920 1193.879 1194.610 1196.463 1201.064
-    ## [2,] 1119.557 1127.035 1150.620 1145.446 1148.404 1149.136 1171.200 1155.590
+    ## [1,] 1165.087 1172.644 1175.913 1190.903 1193.872 1194.662 1196.464 1201.075
+    ## [2,] 1119.613 1127.170 1150.649 1145.429 1148.398 1149.187 1171.201 1155.600
     ##          [,9]    [,10]    [,11]    [,12]    [,13]    [,14]    [,15]
-    ## [1,] 1201.281 1202.077 1210.059 1216.144 1288.876 1292.384 1310.529
-    ## [2,] 1155.806 1156.602 1164.584 1190.880 1263.613 1267.121 1285.266
+    ## [1,] 1201.277 1202.069 1210.063 1216.147 1288.862 1292.384 1310.536
+    ## [2,] 1155.803 1156.595 1164.588 1190.883 1263.598 1267.121 1285.273
 
 ``` r
 
@@ -167,8 +167,8 @@ order(model_AICs)
 
     ##  [1]  9 12  7  8 15  2 11 10 13 14  1  3  5  4  6
 
-Looks like in this case the AIC and the BIC are pretty aligned with each
-other. Look at the best two model models:
+Looks like in this case the AIC and the BIC are reasonably aligned with
+each other. Look at the best two models:
 
 ``` r
 
@@ -187,11 +187,11 @@ Let’s use the best model. Optimize it a bit harder:
 
 i <- 9
 env_dat <- env_array[,,models[i,]==1,drop=FALSE]
-starts <- xsdm::start_parms(env_dat,num_starts=100)
+starts <- start_parms(env_dat[occ==1,,,drop=FALSE],num_starts=100)
 best_model_results <- list()
 for (j in 1:nrow(starts))
 {
-  best_model_results[[j]] <- optim(par=starts[j,],fn=xsdm::loglik_math,
+  best_model_results[[j]] <- optim(par=starts[j,],fn=loglik_math,
                                  method="BFGS",
                                  env_dat=env_dat, occ=occ,negative=TRUE,
                                  control=list(trace=0))
@@ -202,14 +202,14 @@ best_model_results <- best_model_results[inds]
 min(sapply(X=all_model_results[[i]], FUN=function(y){y$value}))
 ```
 
-    ## [1] 550.7784
+    ## [1] 550.8064
 
 ``` r
 
 best_model_results[[1]]$value
 ```
 
-    ## [1] 550.7784
+    ## [1] 550.8064
 
 Pretty similar, so we HAD pretty much fully optimized before.
 
@@ -233,7 +233,7 @@ examine_optim_results <- function(optim_results,mask=NULL)
   parms_dists_to_best <- lapply(
     X=optim_results,
     FUN=function(x){
-      xsdm::dist_between_params(
+      dist_between_params(
         x$par,
         best_parms_math,
         mask=mask,
@@ -242,7 +242,7 @@ examine_optim_results <- function(optim_results,mask=NULL)
   )
   parms_dists <- sapply(X=parms_dists_to_best, FUN=function(x){x$distance})
 
-  #look at the best 5 results in parameter space
+  #get the parameters from each optimization run which are closest to the first set
   bestparms <- sapply(X=parms_dists_to_best, FUN=function(x){unlist(x$representative)})
 
   #put it all together
@@ -253,51 +253,51 @@ h <- examine_optim_results(best_model_results)
 t(h[,1:8])
 ```
 
-    ##      bestlogliks convergences  parms_dists      mu1      mu2  sigltil1
-    ## [1,]    550.7784            0 0.0000000000 14.26891 3.549557 0.4576273
-    ## [2,]    550.7784            0 0.0001446034 14.26892 3.549587 0.4576403
-    ## [3,]    550.7784            0 0.0000609491 14.26891 3.549573 0.4576361
-    ## [4,]    550.7784            0 0.0001370572 14.26892 3.549587 0.4576398
-    ## [5,]    550.7784            0 0.0001390742 14.26891 3.549593 0.4576358
-    ## [6,]    550.7784            0 0.0002642835 14.26892 3.549624 0.4576387
-    ## [7,]    550.7784            0 0.0001351676 14.26893 3.549543 0.4576448
-    ## [8,]    550.7784            0 0.0001916664 14.26897 3.549577 0.4576510
-    ##       sigltil2 sigrtil1 sigrtil2       ctil        pd    o_mat1     o_mat2
-    ## [1,] 0.1481546 4.892066 4.602596 -0.1921848 0.9999960 0.9700436 -0.2429307
-    ## [2,] 0.1481574 4.892031 4.602676 -0.1921751 0.9999957 0.9700426 -0.2429348
-    ## [3,] 0.1481537 4.892095 4.602592 -0.1921880 0.9999948 0.9700433 -0.2429321
-    ## [4,] 0.1481572 4.892030 4.602673 -0.1921757 0.9999945 0.9700426 -0.2429351
-    ## [5,] 0.1481574 4.892049 4.602698 -0.1921752 0.9999936 0.9700421 -0.2429367
-    ## [6,] 0.1481601 4.892012 4.602689 -0.1921887 0.9999934 0.9700422 -0.2429366
-    ## [7,] 0.1481525 4.892033 4.602843 -0.1921551 0.9999889 0.9700435 -0.2429312
-    ## [8,] 0.1481574 4.892008 4.602524 -0.1922446 0.9999874 0.9700449 -0.2429257
-    ##         o_mat3    o_mat4
-    ## [1,] 0.2429307 0.9700436
-    ## [2,] 0.2429348 0.9700426
-    ## [3,] 0.2429321 0.9700433
-    ## [4,] 0.2429351 0.9700426
-    ## [5,] 0.2429367 0.9700421
-    ## [6,] 0.2429366 0.9700422
-    ## [7,] 0.2429312 0.9700435
-    ## [8,] 0.2429257 0.9700449
+    ##      bestlogliks convergences  parms_dists      mu1      mu2 sigltil1  sigltil2
+    ## [1,]    550.8064            0 0.0000000000 14.26739 3.550976 4.605441 0.4572114
+    ## [2,]    550.8064            0 0.0006586953 14.26706 3.551155 4.605143 0.4571020
+    ## [3,]    550.8064            0 0.0003171643 14.26754 3.550946 4.605450 0.4572566
+    ## [4,]    550.8064            0 0.0006132105 14.26707 3.551124 4.605419 0.4571075
+    ## [5,]    550.8064            0 0.0008011962 14.26777 3.550840 4.605461 0.4573422
+    ## [6,]    550.8064            0 0.0000799259 14.26737 3.550959 4.605582 0.4572064
+    ## [7,]    550.8064            0 0.0003904173 14.26754 3.550937 4.605617 0.4572566
+    ## [8,]    550.8064            0 0.0016968145 14.26737 3.551223 4.604871 0.4572748
+    ##       sigrtil1 sigrtil2       ctil        pd     o_mat1     o_mat2    o_mat3
+    ## [1,] 0.1482753 4.892247 -0.1916786 0.9999978 -0.2430936 -0.9700028 0.9700028
+    ## [2,] 0.1482779 4.892511 -0.1917463 0.9999901 -0.2431073 -0.9699994 0.9699994
+    ## [3,] 0.1482788 4.892006 -0.1917135 0.9999874 -0.2430854 -0.9700049 0.9700049
+    ## [4,] 0.1482767 4.892354 -0.1917055 0.9999872 -0.2431085 -0.9699991 0.9699991
+    ## [5,] 0.1482815 4.892294 -0.1916588 0.9999870 -0.2430725 -0.9700081 0.9700081
+    ## [6,] 0.1482744 4.892272 -0.1916193 0.9999868 -0.2430970 -0.9700020 0.9700020
+    ## [7,] 0.1482813 4.892361 -0.1916116 0.9999795 -0.2430852 -0.9700049 0.9700049
+    ## [8,] 0.1483115 4.893160 -0.1916173 0.9999781 -0.2430938 -0.9700028 0.9700028
+    ##          o_mat4
+    ## [1,] -0.2430936
+    ## [2,] -0.2431073
+    ## [3,] -0.2430854
+    ## [4,] -0.2431085
+    ## [5,] -0.2430725
+    ## [6,] -0.2430970
+    ## [7,] -0.2430852
+    ## [8,] -0.2430938
 
 This looks good, in the sense that it looks like multiple optimizations
-arrived at about the same place in parameter space, which is some
-evidence that we may have found the global maximum of the likelihood
-function The only problem is that \\p_d\\ is very close to \\1\\.
+arrived at the same place in parameter space, which is some evidence
+that we may have found the global maximum of the likelihood function.
+The only problem is that \\p_d\\ is very close to \\1\\.
 
 Let’s profile this model and see what we get:
 
 ``` r
 
-pnames <- names(xsdm::make_mask_names(2))
+pnames <- names(make_mask_names(2))
 
 all_profiles <- list()
 linc <- c(rep(0.05,8),0.01)
 rinc <- c(rep(0.05,8),0.01)
 for (counter in 1:9)
 {
-  all_profiles[[counter]] <- xsdm::profile_likelihood(
+  all_profiles[[counter]] <- profile_likelihood(
                               profile_parameter=pnames[counter],
                               increment_left=linc[counter],
                               increment_right=rinc[counter],
@@ -345,8 +345,9 @@ plot_tool(all_profiles,9)
 
 ![](03-boundary_models_files/figure-html/plot_profiles_first-1.png)
 
-So yes, there is the expected problem with pd. This is a common problem
-and it manifests in the manner illustrated here.
+So yes, the expected problem with `pd` is appearing. We cannot use a
+model for which profiles do not show a dome-like pattern. This is a
+common problem and it manifests in the manner illustrated here.
 
 The solution is to use the boundary model with \\p_d = 1\\:
 
@@ -369,7 +370,7 @@ mask
 
 ``` r
 
-new_starts <- xsdm::start_parms(env_dat[occ==1,,,drop=FALSE],
+new_starts <- start_parms(env_dat[occ==1,,,drop=FALSE],
                                   mask=mask,num_starts=100)
 head(new_starts)
 ```
@@ -377,19 +378,19 @@ head(new_starts)
     ## # A tibble: 6 × 8
     ##     mu1   mu2 sigltil1 sigltil2 sigrtil1 sigrtil2   ctil o_par1
     ##   <dbl> <dbl>    <dbl>    <dbl>    <dbl>    <dbl>  <dbl>  <dbl>
-    ## 1  15.6  7.89   0.297   1.05       1.19     0.702 -1.32   -3.39
-    ## 2  18.1  5.25   0.990   0.354      0.497    1.40  -0.744   6.04
-    ## 3  19.3  6.57  -0.0496  0.700      1.54     0.356 -1.61   -8.10
-    ## 4  16.9  3.92   0.644   0.00711    0.843    1.05  -1.03    1.33
-    ## 5  17.5  5.91   0.124   0.874      1.36     0.182 -1.46   -5.74
-    ## 6  19.9  8.55   0.817   0.180      0.670    0.875 -0.887   3.68
+    ## 1  15.6  7.89   0.299   1.05       1.19     0.702 -1.32   -3.39
+    ## 2  18.1  5.24   0.992   0.355      0.498    1.40  -0.743   6.04
+    ## 3  19.3  6.57  -0.0473  0.702      1.54     0.356 -1.60   -8.10
+    ## 4  16.9  3.92   0.646   0.00881    0.844    1.05  -1.03    1.33
+    ## 5  17.5  5.91   0.126   0.875      1.36     0.183 -1.46   -5.74
+    ## 6  19.9  8.55   0.819   0.182      0.671    0.876 -0.886   3.68
 
 ``` r
 
 bdry_optim_results <- list()
 for (j in 1:nrow(new_starts))
 {
-  bdry_optim_results[[j]] <- optim(par=new_starts[j,],fn=xsdm::loglik_math,
+  bdry_optim_results[[j]] <- optim(par=new_starts[j,],fn=loglik_math,
                                 method="BFGS",
                                 env_dat=env_dat,occ=occ,mask=mask,negative=TRUE,
                                 control=list(trace=0,maxit=500))
@@ -401,42 +402,27 @@ Have a look at these results:
 ``` r
 
 h <- examine_optim_results(bdry_optim_results,mask=mask)
-t(h[,1:10])
+t(h[,1:8])
 ```
 
-    ##       bestlogliks convergences  parms_dists      mu1      mu2  sigltil1
-    ##  [1,]    550.7784            0 0.000000e+00 14.26898 3.549565 0.1481579
-    ##  [2,]    550.7784            0 4.800380e-05 14.26896 3.549569 0.1481577
-    ##  [3,]    550.7784            0 2.621185e-05 14.26898 3.549556 0.1481583
-    ##  [4,]    550.7784            0 1.251270e-04 14.26895 3.549562 0.1481553
-    ##  [5,]    550.7784            0 1.242072e-04 14.26905 3.549547 0.1481583
-    ##  [6,]    550.7784            0 6.697159e-05 14.26896 3.549563 0.1481568
-    ##  [7,]    550.7784            0 1.334626e-04 14.26898 3.549544 0.1481556
-    ##  [8,]    550.7784            0 1.228045e-04 14.26892 3.549584 0.1481572
-    ##  [9,]    550.7784            0 1.076407e-04 14.26893 3.549582 0.1481573
-    ## [10,]    550.7784            0 1.084495e-04 14.26892 3.549589 0.1481576
-    ##       sigltil2 sigrtil1  sigrtil2       ctil pd    o_mat1    o_mat2     o_mat3
-    ##  [1,] 4.892005 4.602648 0.4576596 -0.1921786  1 0.2429296 0.9700439 -0.9700439
-    ##  [2,] 4.892013 4.602687 0.4576510 -0.1921726  1 0.2429303 0.9700437 -0.9700437
-    ##  [3,] 4.892046 4.602512 0.4576606 -0.1921872  1 0.2429291 0.9700440 -0.9700440
-    ##  [4,] 4.892064 4.602624 0.4576539 -0.1921786  1 0.2429291 0.9700440 -0.9700440
-    ##  [5,] 4.891977 4.602488 0.4576790 -0.1922139  1 0.2429287 0.9700441 -0.9700441
-    ##  [6,] 4.892015 4.602650 0.4576518 -0.1921791  1 0.2429327 0.9700431 -0.9700431
-    ##  [7,] 4.892069 4.602353 0.4576443 -0.1922112  1 0.2429266 0.9700447 -0.9700447
-    ##  [8,] 4.892030 4.602648 0.4576392 -0.1921772  1 0.2429327 0.9700431 -0.9700431
-    ##  [9,] 4.891997 4.602657 0.4576414 -0.1921772  1 0.2429322 0.9700433 -0.9700433
-    ## [10,] 4.892044 4.602678 0.4576418 -0.1921761  1 0.2429322 0.9700433 -0.9700433
-    ##          o_mat4
-    ##  [1,] 0.2429296
-    ##  [2,] 0.2429303
-    ##  [3,] 0.2429291
-    ##  [4,] 0.2429291
-    ##  [5,] 0.2429287
-    ##  [6,] 0.2429327
-    ##  [7,] 0.2429266
-    ##  [8,] 0.2429327
-    ##  [9,] 0.2429322
-    ## [10,] 0.2429322
+    ##      bestlogliks convergences  parms_dists      mu1      mu2  sigltil1 sigltil2
+    ## [1,]    550.8063            0 0.000000e+00 14.26741 3.550951 0.1482747 4.892239
+    ## [2,]    550.8063            0 4.374443e-05 14.26740 3.550958 0.1482741 4.892262
+    ## [3,]    550.8063            0 5.187592e-05 14.26744 3.550951 0.1482751 4.892222
+    ## [4,]    550.8063            0 2.199448e-05 14.26741 3.550962 0.1482748 4.892246
+    ## [5,]    550.8063            0 3.983488e-05 14.26740 3.550954 0.1482753 4.892266
+    ## [6,]    550.8063            0 9.529778e-05 14.26745 3.550929 0.1482731 4.892174
+    ## [7,]    550.8063            0 6.799521e-05 14.26739 3.550974 0.1482754 4.892249
+    ## [8,]    550.8063            0 6.067718e-05 14.26740 3.550968 0.1482757 4.892246
+    ##      sigrtil1  sigrtil2       ctil pd    o_mat1    o_mat2     o_mat3    o_mat4
+    ## [1,] 4.605536 0.4572214 -0.1916681  1 0.2430902 0.9700037 -0.9700037 0.2430902
+    ## [2,] 4.605472 0.4572158 -0.1916731  1 0.2430897 0.9700038 -0.9700038 0.2430897
+    ## [3,] 4.605392 0.4572290 -0.1916862  1 0.2430872 0.9700044 -0.9700044 0.2430872
+    ## [4,] 4.605468 0.4572182 -0.1916753  1 0.2430905 0.9700036 -0.9700036 0.2430905
+    ## [5,] 4.605618 0.4572173 -0.1916540  1 0.2430890 0.9700040 -0.9700040 0.2430890
+    ## [6,] 4.605459 0.4572284 -0.1916864  1 0.2430900 0.9700037 -0.9700037 0.2430900
+    ## [7,] 4.605460 0.4572110 -0.1916809  1 0.2430915 0.9700034 -0.9700034 0.2430915
+    ## [8,] 4.605406 0.4572140 -0.1916786  1 0.2430895 0.9700039 -0.9700039 0.2430895
 
 This looks like enough of them converged to the same thing to say that
 it looks like I successfully optimized. Get the likelihood:
@@ -449,14 +435,14 @@ bdry_optim_results <- bdry_optim_results[inds]
 best_model_results[[1]]$value
 ```
 
-    ## [1] 550.7784
+    ## [1] 550.8064
 
 ``` r
 
 bdry_optim_results[[1]]$value
 ```
 
-    ## [1] 550.7784
+    ## [1] 550.8063
 
 So the likelihood is the same as for the previous (non-boundary) model.
 But we have one less parameter that has been fitted. Get the AIC and BIC
@@ -471,21 +457,21 @@ AIC_old <- unname(2*best_model_results[[1]]$value+
 AIC
 ```
 
-    ## [1] 1117.557
+    ## [1] 1117.613
 
 ``` r
 
 AIC_old
 ```
 
-    ## [1] 1119.557
+    ## [1] 1119.613
 
 ``` r
 
 AIC-AIC_old
 ```
 
-    ## [1] -2.000034
+    ## [1] -2.000019
 
 ``` r
 
@@ -496,21 +482,21 @@ BIC_old <- unname(2*best_model_results[[1]]$value+
 BIC
 ```
 
-    ## [1] 1157.979
+    ## [1] 1158.034
 
 ``` r
 
 BIC_old
 ```
 
-    ## [1] 1165.031
+    ## [1] 1165.087
 
 ``` r
 
 BIC-BIC_old
 ```
 
-    ## [1] -7.052755
+    ## [1] -7.05274
 
 ``` r
 
@@ -520,14 +506,14 @@ log(length(occ))
     ## [1] 7.052721
 
 So the AIC and BIC are better for the boundary model compared to the
-earlier model, and by the expected amounts. We go with the simpler
+earlier model, and by the expected amounts. We go with the boundary
 model.
 
 Let’s profile this boundary model and see what we get:
 
 ``` r
 
-pnames <- names(xsdm::make_mask_names(2))
+pnames <- names(make_mask_names(2))
 pnames <- pnames[pnames!="pd"]
 mask
 ```
@@ -542,7 +528,7 @@ linc <- c(rep(0.05,7),0.01)
 rinc <- c(rep(0.05,7),0.01)
 for (counter in 1:8)
 {
-  all_bdry_profiles[[counter]] <- xsdm::profile_likelihood(
+  all_bdry_profiles[[counter]] <- profile_likelihood(
                               profile_parameter=pnames[counter],
                               increment_left=linc[counter],
                               increment_right=rinc[counter],
@@ -576,12 +562,16 @@ plot_tool(all_bdry_profiles,8)
 
 ![](03-boundary_models_files/figure-html/plot_profiles-1.png)
 
-These are dome-shaped, suggesting the likelihood function is
-well-behaved in the vacinity of the maximum we found, and inferences can
-be made. Note these profiles look essentially the same as those obtained
-previously, except \\\vec{\sigma}\_L\\ and \\\vec{\sigma}\_R\\ have been
-switched (which can happen, given redundancy in parameters explained in
-“How to fit xsdm models with species occurrence data using xsdm”). The
-overall lesson is, when optimizing the xsdm likelihood function gives a
-best model with \\p_d\\ close to \\1\\ and a non-dome-shaped profile for
-\\p_d\\, use the boundary model with \\p_d = 1\\.
+These are sufficiently dome-shaped, suggesting the likelihood function
+is sufficiently well-behaved in the vicinity of the maximum we found,
+and inferences can be made. Note these profiles look essentially the
+same as those obtained previously, except the \\\sigma\\ profiles have
+been switched around (which can happen, given redundancy in parameters
+explained in “How to fit xsdm models with species occurrence data using
+xsdm”). The overall lesson is, when optimizing the xsdm likelihood
+function gives a best model with \\p_d\\ close to \\1\\ and a
+non-dome-shaped profile for \\p_d\\, use the boundary model with \\p_d =
+1\\. We also saw a demonstration of the `xsdm` functionality for fitting
+boundary models. Other boundary models can also be fitted. See the
+document “Unusable models: when a model does not have a maximum
+likelihood” for more examples of fitting boundary models.

@@ -33,7 +33,7 @@ package \`copula\` vignette.
 
 ## See also
 
-[`log1mexp`](https://xsdm-project.github.io/xsdm-devel/reference/log1mexp.md),
+[`log1mexp`](https://xsdm-project.github.io/xsdm/reference/log1mexp.md),
 [`log1p`](https://rdrr.io/r/base/Log.html),
 [`expm1`](https://rdrr.io/r/base/Log.html)
 

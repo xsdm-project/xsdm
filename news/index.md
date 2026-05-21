@@ -13,9 +13,9 @@ First public release.
   implementations are preserved as non-exported `*_r` functions in
   `R/internals.R` and used by the test suite to assert numerical parity
   at `tol = 1e-6`.
-- **[`optimize_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/optimize_likelihood.md)
+- **[`optimize_likelihood()`](https://xsdm-project.github.io/xsdm/reference/optimize_likelihood.md)
   and
-  [`profile_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/profile_likelihood.md)**
+  [`profile_likelihood()`](https://xsdm-project.github.io/xsdm/reference/profile_likelihood.md)**
   drive
   [`ucminfcpp::ucminfcpp_xptr()`](https://CRAN.R-project.org/package=ucminfcpp)
   with a pure-C++ XPtr factory (`make_loglik_math_xptr_cpp`), so there
@@ -24,7 +24,7 @@ First public release.
   parameter vector can be fixed during optimization, and the remaining
   free parameters are optimized end-to-end on the math scale.
 - **Profile-likelihood name propagation fix.**
-  [`profile_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/profile_likelihood.md)
+  [`profile_likelihood()`](https://xsdm-project.github.io/xsdm/reference/profile_likelihood.md)
   now preserves free-parameter names across the `ucminf` boundary, so
   profile rows are reliably labelled with the parameter being held
   fixed.
@@ -48,7 +48,7 @@ First public release.
   forwards to `like_neg_ltsgr`. New code should call `like_neg_ltsgr`
   directly.
 
-- [`dist_between_params()`](https://xsdm-project.github.io/xsdm-devel/reference/dist_between_params.md)
+- [`dist_between_params()`](https://xsdm-project.github.io/xsdm/reference/dist_between_params.md)
   is now backed by a pure-C++ implementation in
   `src/dist_between_params.cpp` that builds the pairing cost matrix and
   solves the linear sum assignment problem via a clean-room Hungarian /
@@ -64,16 +64,16 @@ First public release.
 
 ### Validation & robustness
 
-- [`optimize_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/optimize_likelihood.md),
-  [`start_parms()`](https://xsdm-project.github.io/xsdm-devel/reference/start_parms.md),
+- [`optimize_likelihood()`](https://xsdm-project.github.io/xsdm/reference/optimize_likelihood.md),
+  [`start_parms()`](https://xsdm-project.github.io/xsdm/reference/start_parms.md),
   and
-  [`get_start_parms_()`](https://xsdm-project.github.io/xsdm-devel/reference/get_start_parms_.md)
+  [`get_start_parms_()`](https://xsdm-project.github.io/xsdm/reference/get_start_parms_.md)
   now reject `num_starts < 3` early with an informative `checkmate`
   error, rather than crashing inside
   [`sobol::sobol_design()`](https://alrobles.github.io/sobol/reference/sobol_design.html)
   (which segfaults at `nseq = 0` and returns a malformed vector at
   `nseq = 1`).
-- [`start_parms()`](https://xsdm-project.github.io/xsdm-devel/reference/start_parms.md)
+- [`start_parms()`](https://xsdm-project.github.io/xsdm/reference/start_parms.md)
   runtime:
   [`sobol::sobol_design`](https://alrobles.github.io/sobol/reference/sobol_design.html)
   output is defensively coerced to a `data.frame`, protecting against
@@ -83,10 +83,10 @@ First public release.
 
 - `terra` and `tibble` moved from `Suggests:` to `Imports:`. Both are
   used unconditionally in mainline package code
-  ([`env_data_array()`](https://xsdm-project.github.io/xsdm-devel/reference/env_data_array.md),
-  [`habitat_suitability()`](https://xsdm-project.github.io/xsdm-devel/reference/habitat_suitability.md),
-  [`start_parms()`](https://xsdm-project.github.io/xsdm-devel/reference/start_parms.md),
-  [`vsp()`](https://xsdm-project.github.io/xsdm-devel/reference/vsp.md)).
+  ([`env_data_array()`](https://xsdm-project.github.io/xsdm/reference/env_data_array.md),
+  [`habitat_suitability()`](https://xsdm-project.github.io/xsdm/reference/habitat_suitability.md),
+  [`start_parms()`](https://xsdm-project.github.io/xsdm/reference/start_parms.md),
+  [`vsp()`](https://xsdm-project.github.io/xsdm/reference/vsp.md)).
 - `src/*.hpp` headers renamed to `src/*.h` to satisfy `R CMD check`’s
   “Subdirectory ‘src’ contains” warning.
 - New `R-CMD-check.yaml` GitHub workflow runs `R CMD check --as-cran` on
@@ -98,6 +98,6 @@ First public release.
 
 - All non-exported helpers (`check_env_array`, `logit`, `permutations`,
   `auto_plot_lims_`, etc.) consolidated in `R/internals.R`.
-- [`profile_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/profile_likelihood.md)
+- [`profile_likelihood()`](https://xsdm-project.github.io/xsdm/reference/profile_likelihood.md)
   cleanly stops when the requested parameter is outside the masked
   design.

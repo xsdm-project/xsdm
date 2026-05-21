@@ -24,11 +24,11 @@ The statistical underpinning is described in:
 
 ## Installation
 
-### CRAN (coming soon)
+### CRAN
 
 ``` r
 
-install.packages("xsdm")   # not yet on CRAN — see development install below
+install.packages("xsdm")
 ```
 
 ### Development version
@@ -109,7 +109,7 @@ terra::plot(pts_1, add = TRUE, col = "red", pch = 20, cex = 0.2)
 
 ### 3 · Build the environmental data array
 
-[`env_data_array()`](https://xsdm-project.github.io/xsdm-devel/reference/env_data_array.md)
+[`env_data_array()`](https://xsdm-project.github.io/xsdm/reference/env_data_array.md)
 extracts and stacks environmental values at the locations given in a
 presence/absence data frame, returning a 3-D array
 `(locations × time × variables)`.
@@ -125,7 +125,7 @@ occ <- d$presence
 
 ### 4 · Fit the model
 
-[`optimize_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/optimize_likelihood.md)
+[`optimize_likelihood()`](https://xsdm-project.github.io/xsdm/reference/optimize_likelihood.md)
 runs multiple optimizations from Latin-hypercube starting points and
 returns every solution sorted by decreasing log-likelihood:
 
@@ -194,16 +194,16 @@ terra::plot(hab_suit, main = "Habitat suitability", xlab = "x", ylab = "y")
 
 | Function | Purpose |
 |----|----|
-| [`env_data_array()`](https://xsdm-project.github.io/xsdm-devel/reference/env_data_array.md) | Build a `(locations × time × variables)` array from raster time series and an occurrence table |
-| [`optimize_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/optimize_likelihood.md) | Multi-start MLE fitting; returns solutions sorted by log-likelihood |
-| [`loglik_math()`](https://xsdm-project.github.io/xsdm-devel/reference/loglik_math.md) | Evaluate the log-likelihood at any math-scale parameter vector |
-| [`math_to_bio()`](https://xsdm-project.github.io/xsdm-devel/reference/math_to_bio.md) | Convert math-scale vector → biological-scale parameter list |
-| [`bio_to_math()`](https://xsdm-project.github.io/xsdm-devel/reference/bio_to_math.md) | Convert biological-scale parameter list → math-scale vector |
-| [`start_parms()`](https://xsdm-project.github.io/xsdm-devel/reference/start_parms.md) | Generate Latin-hypercube starting points from presence-only data |
-| [`profile_likelihood()`](https://xsdm-project.github.io/xsdm-devel/reference/profile_likelihood.md) | Profile one parameter while re-optimising over the rest |
-| [`habitat_suitability()`](https://xsdm-project.github.io/xsdm-devel/reference/habitat_suitability.md) | Produce a spatial probability-of-detection map |
-| [`interpret_parameters()`](https://xsdm-project.github.io/xsdm-devel/reference/interpret_parameters.md) | Diagnostic plots of the niche shape |
-| [`dist_between_params()`](https://xsdm-project.github.io/xsdm-devel/reference/dist_between_params.md) | Distance between two parameter sets (Hungarian algorithm, equivalence-class aware) |
+| [`env_data_array()`](https://xsdm-project.github.io/xsdm/reference/env_data_array.md) | Build a `(locations × time × variables)` array from raster time series and an occurrence table |
+| [`optimize_likelihood()`](https://xsdm-project.github.io/xsdm/reference/optimize_likelihood.md) | Multi-start MLE fitting; returns solutions sorted by log-likelihood |
+| [`loglik_math()`](https://xsdm-project.github.io/xsdm/reference/loglik_math.md) | Evaluate the log-likelihood at any math-scale parameter vector |
+| [`math_to_bio()`](https://xsdm-project.github.io/xsdm/reference/math_to_bio.md) | Convert math-scale vector → biological-scale parameter list |
+| [`bio_to_math()`](https://xsdm-project.github.io/xsdm/reference/bio_to_math.md) | Convert biological-scale parameter list → math-scale vector |
+| [`start_parms()`](https://xsdm-project.github.io/xsdm/reference/start_parms.md) | Generate Latin-hypercube starting points from presence-only data |
+| [`profile_likelihood()`](https://xsdm-project.github.io/xsdm/reference/profile_likelihood.md) | Profile one parameter while re-optimising over the rest |
+| [`habitat_suitability()`](https://xsdm-project.github.io/xsdm/reference/habitat_suitability.md) | Produce a spatial probability-of-detection map |
+| [`interpret_parameters()`](https://xsdm-project.github.io/xsdm/reference/interpret_parameters.md) | Diagnostic plots of the niche shape |
+| [`dist_between_params()`](https://xsdm-project.github.io/xsdm/reference/dist_between_params.md) | Distance between two parameter sets (Hungarian algorithm, equivalence-class aware) |
 
 ------------------------------------------------------------------------
 
@@ -259,4 +259,4 @@ BibTeX:
 ## License
 
 xsdm is released under the [GNU Affero General Public License v3 or
-later](https://xsdm-project.github.io/xsdm-devel/LICENSE.md).
+later](https://www.gnu.org/licenses/agpl-3.0.html).

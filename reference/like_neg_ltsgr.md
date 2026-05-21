@@ -66,7 +66,7 @@ Internally, this function:
 2.  Computes inverse (diagonal) matrices for asymmetry adjustments.
 
 3.  Calls the C++ function
-    [`like_ltsg()`](https://xsdm-project.github.io/xsdm-devel/reference/like_ltsg.md)
+    [`like_ltsg()`](https://xsdm-project.github.io/xsdm/reference/like_ltsg.md)
     for efficient likelihood computation.
 
 ## Note
@@ -81,10 +81,10 @@ orthogonal matrix (i.e., `o_mat %*% t(o_mat)` is the identity).
 ``` r
 # Example usage:
 like_neg_ltsgr(env_dat = example_1$env_array,
-               mu      = example_1$par_list$mu,
-               sigltil = example_1$par_list$sigltil,
-               sigrtil = example_1$par_list$sigrtil,
-               o_mat   = example_1$par_list$o_mat)
+               mu      = example_1$true_par_list$mu,
+               sigltil = example_1$true_par_list$sigltil,
+               sigrtil = example_1$true_par_list$sigrtil,
+               o_mat   = example_1$true_par_list$o_mat)
 #>    [1]   2.738171   8.535266   8.374321   7.154807   8.444485   3.477033
 #>    [7]   3.272479   8.034020   5.494181   3.406080   3.894184   8.221686
 #>   [13]   7.075254   5.269100   4.288629   3.740807   6.999191   4.930312
