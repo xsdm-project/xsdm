@@ -16,85 +16,84 @@ A list of 11 objects:
 - `par_vec`:
 
   Named numeric vector of length 9. Math-scale parameters for a
-  2‑variable model (p = 2). Canonical names: \`mu1\`, \`mu2\`,
-  \`sigltil1\`, \`sigltil2\`, \`sigrtil1\`, \`sigrtil2\`, \`ctil\`,
-  \`pd\`, \`o_par1\`.
+  2-variable model (p = 2). Canonical names: `mu1`, `mu2`, `sigltil1`,
+  `sigltil2`, `sigrtil1`, `sigrtil2`, `ctil`, `pd`, `o_par1`.
 
 - `bio01`:
 
-  A packed \`SpatRaster\` (use \`terra::unwrap()\`) with 128 × 123 cells
-  and 39 layers. Annual average temperature (bio1) for 1980–2018, CHELSA
-  2.1 data, centred on southern New Mexico, USA.
+  A packed `SpatRaster` (use
+  [`terra::unwrap()`](https://rspatial.github.io/terra/reference/wrap.html))
+  with 128 x 123 cells and 39 layers. Annual average temperature (bio1)
+  for 1980-2018, CHELSA 2.1 data, centred on southern New Mexico, USA.
 
 - `bio12`:
 
-  A packed \`SpatRaster\` (use \`terra::unwrap()\`) with 128 × 123 cells
-  and 39 layers. Annual precipitation (bio12) for the same region and
-  time period.
+  A packed `SpatRaster` (use
+  [`terra::unwrap()`](https://rspatial.github.io/terra/reference/wrap.html))
+  with 128 x 123 cells and 39 layers. Annual precipitation (bio12) for
+  the same region and time period.
 
 - `env_array`:
 
-  A 3‑D numeric array with dimensions \`2000 (locations) × 39 (time) × 2
-  (variables)\`. Contains the environmental data (bio1 and bio12)
-  extracted from the rasters for all locations.
+  A 3-D numeric array with dimensions 4000 (locations) x 39 (time) x 2
+  (variables). Contains the environmental data (bio1 and bio12, both
+  divided by 100) extracted from the rasters at the `occ_df` locations.
 
 - `occ_df`:
 
-  A data frame with 1000 rows and 4 columns: \`name\` (character), \`x\`
-  (longitude), \`y\` (latitude), \`presence\` (0/1). Occurrence records
-  for the virtual species \*Mus virtualis\*.
+  A data frame with 4000 rows and 4 columns: `name` (character), `lon`
+  (longitude), `lat` (latitude), `presence` (0/1). Occurrence records
+  for a virtual species.
 
 - `occ_vec`:
 
-  An integer vector of length 2000. Binary presence/absence (0/1) for
-  the same locations as \`env_array\`.
+  An integer vector of length 4000. Binary presence/absence (0/1)
+  corresponding to `occ_df$presence`.
+
+- `true_par_list`:
+
+  A list of biological-scale parameters (the "true" parameter set used
+  to generate the virtual species). Contains `mu`, `sigltil`, `sigrtil`,
+  `ctil`, `pd`, `o_mat`.
 
 - `optim_par_list`:
 
-  A list of biological‑scale parameters (the MLE fit for the example).
-  Contains \`mu\`, \`sigltil\`, \`sigrtil\`, \`ctil\`, \`pd\`,
-  \`o_mat\`.
+  A list of biological-scale parameters (the MLE fit for the example).
+  Contains `mu`, `sigltil`, `sigrtil`, `ctil`, `pd`, `o_mat`.
 
 - `optim_par_vec`:
 
-  A named numeric vector of length 9. Math‑scale parameters
-  corresponding to \`optim_par_list\`.
+  A named numeric vector of length 9. Math-scale parameters
+  corresponding to `optim_par_list`.
 
 - `optim_par_vec_equivalent`:
 
-  A named numeric vector of length 9. A different math‑scale
+  A named numeric vector of length 9. A different math-scale
   representation that belongs to the same equivalence class as
-  \`optim_par_vec\`. Used to test \`dist_between_params()\`.
-
-- `par_list`:
-
-  A list of biological‑scale parameters (a “true” parameter set, not
-  necessarily the MLE). Used in examples of \`interpret_parameters()\`,
-  \`vsp()\`, etc.
-
-- `par_vec_vsp`:
-
-  A named numeric vector of length 9, math‑scale parameters. Currently
-  an alias for \`par_vec\` (retained for backward compatibility).
+  `optim_par_vec`. Used to test
+  [`dist_between_params()`](https://xsdm-project.github.io/xsdm-devel/reference/dist_between_params.md).
 
 - `par_table`:
 
-  A data.frame with 9 columns corresponding to a parameter in math scale
-  and 100 rows corresponding to 100 combinations.
+  A data.frame with 9 columns (one per math-scale parameter) and 100
+  rows of parameter combinations.
 
 ## Source
 
-Berti e al, 2024 (\<https://doi.org/10.1101/2024.10.30.621023\>)
+Berti et al., 2025
+([doi:10.1101/2024.10.30.621023](https://doi.org/10.1101/2024.10.30.621023)
+)
 
 ## Details
 
-All rasters (\`bio01\`, \`bio12\`) are stored as packed \`SpatRaster\`
-objects to reduce package size. Before using them, unpack with
-\`terra::unwrap()\`, e.g.: `bio1 <- terra::unwrap(example_1$bio01)`.
+All rasters (`bio01`, `bio12`) are stored as packed `SpatRaster` objects
+to reduce package size. Before using them, unpack with
+[`terra::unwrap()`](https://rspatial.github.io/terra/reference/wrap.html),
+e.g.: `bio1 <- terra::unwrap(example_1$bio01)`.
 
 The environmental data are originally from CHELSA v2.1
-(\<https://www.chelsa-climate.org/\>). The virtual species was generated
-from the parameters in \`par_list\`.
+(<https://www.chelsa-climate.org/>). The virtual species was generated
+from the parameters in `true_par_list`.
 
 ## Examples
 

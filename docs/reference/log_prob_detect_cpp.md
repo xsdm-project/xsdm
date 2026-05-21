@@ -1,7 +1,7 @@
 # Compute log detection probabilities from a flat environmental data vector
 
 C++ implementation of
-[`log_prob_detect()`](https://xsdm-project.github.io/xsdm/reference/log_prob_detect.md)
+[`log_prob_detect()`](https://xsdm-project.github.io/xsdm-devel/reference/log_prob_detect.md)
 that accepts environmental data as a flat numeric vector with explicit
 dimension metadata. This signature is designed for block-by-block raster
 evaluation where each block is passed as a contiguous vector rather than

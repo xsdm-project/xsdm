@@ -16,3 +16,8 @@ optimize_loglik_math_(
   optimizer_fun = ucminfcpp::ucminf_xptr
 )
 ```
+
+## Value
+
+A list with `par`, `value`, `convergence`, and optionally
+`invhessian.lt`.

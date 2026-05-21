@@ -93,4 +93,4 @@ A list with elements `ll`, `vals`, `fulls`, `conv`, `last_full`,
 
 ## See also
 
-[`profile_likelihood`](https://xsdm-project.github.io/xsdm/reference/profile_likelihood.md)
+[`profile_likelihood`](https://xsdm-project.github.io/xsdm-devel/reference/profile_likelihood.md)

@@ -25,15 +25,15 @@ loglik_math(
   A \*\*named numeric vector\*\* of math-scale parameters. When
   `mask = NULL`, the names must exactly match the canonical schema
   returned by
-  [`make_mask_names`](https://xsdm-project.github.io/xsdm/reference/make_mask_names.md)`(p)`
+  [`make_mask_names`](https://xsdm-project.github.io/xsdm-devel/reference/make_mask_names.md)`(p)`
   where `p = dim(env_dat)[3]`, and the length must equal
-  [`num_par`](https://xsdm-project.github.io/xsdm/reference/num_par.md)`(p)`.
+  [`num_par`](https://xsdm-project.github.io/xsdm-devel/reference/num_par.md)`(p)`.
   When `mask` is supplied, `param_vector` should contain only the names
   \*\*not\*\* present in `mask`, in the canonical order. In both cases
   the vector is combined with `mask` via
-  [`create_param_vector_masked`](https://xsdm-project.github.io/xsdm/reference/create_param_vector_masked.md)
+  [`create_param_vector_masked`](https://xsdm-project.github.io/xsdm-devel/reference/create_param_vector_masked.md)
   and then mapped to biological-scale parameters via
-  [`math_to_bio`](https://xsdm-project.github.io/xsdm/reference/math_to_bio.md).
+  [`math_to_bio`](https://xsdm-project.github.io/xsdm-devel/reference/math_to_bio.md).
   Must not contain missing values. See Details for the full naming and
   ordering conventions.
 
@@ -155,7 +155,7 @@ loglik_math(
   env_dat = example_1$env_array,
   occ = example_1$occ_vec
 )
-#> [1] 630.5103
+#> [1] 6821.99
 # Mute one parameter to use the mask
 par_vec <- example_1$par_vec[-2]
 mask_parameters_a <- c(mu2 = 6.5)
@@ -165,7 +165,7 @@ loglik_math(
   occ = example_1$occ_vec,
   mask = mask_parameters_a
 )
-#> [1] 789.1959
+#> [1] 6284.778
 # Return the negative
 loglik_math(
   param_vector = example_1$par_vec,
@@ -173,5 +173,5 @@ loglik_math(
   occ = example_1$occ_vec,
   negative = TRUE
 )
-#> [1] 630.5103
+#> [1] 6821.99
 ```

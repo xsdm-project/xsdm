@@ -31,9 +31,9 @@ dist_between_params(p1, p2, mask = NULL, give_closest_rep = FALSE)
 - mask:
 
   Same format as the `mask` argument to
-  [`loglik_math`](https://xsdm-project.github.io/xsdm/reference/loglik_math.md)
+  [`loglik_math`](https://xsdm-project.github.io/xsdm-devel/reference/loglik_math.md)
   and
-  [`start_parms`](https://xsdm-project.github.io/xsdm/reference/start_parms.md).
+  [`start_parms`](https://xsdm-project.github.io/xsdm-devel/reference/start_parms.md).
   Ignored if both `p1` and `p2` are on the biological scale. Otherwise
   the names of `mask` must exactly complement the names of whichever of
   `p1` / `p2` is on the math scale.

@@ -46,12 +46,12 @@
 #' ll <- loglik_bio(
 #'   env_dat = example_1$env_array,
 #'   occ = example_1$occ_vec,
-#'   mu = example_1$par_list$mu,
-#'   sigltil = example_1$par_list$sigltil,
-#'   sigrtil = example_1$par_list$sigrtil,
-#'   o_mat = example_1$par_list$o_mat,
-#'   ctil = example_1$par_list$ctil,
-#'   pd = example_1$par_list$pd
+#'   mu = example_1$true_par_list$mu,
+#'   sigltil = example_1$true_par_list$sigltil,
+#'   sigrtil = example_1$true_par_list$sigrtil,
+#'   o_mat = example_1$true_par_list$o_mat,
+#'   ctil = example_1$true_par_list$ctil,
+#'   pd = example_1$true_par_list$pd
 #' )
 #' ll
 loglik_bio <- function(env_dat,
