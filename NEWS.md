@@ -1,3 +1,16 @@
+# xsdm 1.0.1
+
+## Bug fixes
+
+* `vsp()` now selects presence/absence cells by cell index rather than
+  `terra::spatSample()`, fixing an issue where NA-heavy suitability rasters
+  returned fewer cells than requested. Eligible cells are sampled uniformly
+  without replacement (suitability enters the presence/absence outcome via
+  `rbinom()`, so it no longer also biases the spatial draw), and a group with
+  a single eligible cell is handled correctly.
+* Fixed a code/documentation mismatch in `optimize_likelihood()`: `num_cores`
+  was documented but is not an argument of the function.
+
 # xsdm 1.0.0
 
 First public release.
