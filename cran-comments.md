@@ -16,3 +16,7 @@
   xtensor headers. The vendored source is documented in
   `src/vendor/VENDORED_XTENSOR.md`.
 * SystemRequirements: GNU make, C++17.
+* On some Debian/Ubuntu builds of R, `R CMD check` reports a NOTE about the
+  non-portable compilation flag `-mno-omit-leaf-frame-pointer`. This flag is
+  injected by the system R's default `CFLAGS`/`CXXFLAGS` (Makeconf), not by the
+  package, and does not appear under CRAN's build configuration.
