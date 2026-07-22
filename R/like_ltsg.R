@@ -16,6 +16,7 @@
 #' @param q Integer, number of rows for reshaping
 #' @param r Integer, number of columns for reshaping.
 #'
+#' @usage like_ltsg(mu, env_m, dl_mat, drl_mat, ortho_m, q, r)
 #' @return A numeric vector of length `r` with computed sums.
 #' @examples
 #' mu <- c(1, 2)

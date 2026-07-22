@@ -25,6 +25,7 @@
 ^vignettes/_articles_draft
 ^vignettes/articles
 ^vignettes/howToFit\.pdf$
+^vignettes/$
 ^cran-comments\.md$
 ^cache$
 ^figure$

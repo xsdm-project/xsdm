@@ -1,19 +1,3 @@
-//' Compute likelihood for LTSG model
-//'
-//' This function calculates a likelihood-like measure using orthogonal matrices,
-//' environmental data, and diagonal matrices, leveraging parallel computation.
-//'
-//' @name like_ltsg
-//' @title Compute likelihood for LTSG model
-//' @param mu Numeric vector of means (length equal to number of rows in `env_m`)
-//' @param env_m Numeric matrix of environmental data
-//' @param dl_mat Diagonal matrix (as NumericMatrix)
-//' @param drl_mat Diagonal matrix (as NumericMatrix)
-//' @param ortho_m Numeric matrix (orthogonal basis)
-//' @param q Integer, number of rows for reshaping
-//' @param r Integer, number of columns for reshaping.
-//' @return A numeric vector of length `r` with computed sums.
-
 #include <Rcpp.h>
 #include <RcppParallel.h>
 using namespace Rcpp;
