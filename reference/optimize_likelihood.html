@@ -76,7 +76,6 @@ vector (list-column) reconstructed with <code>mask</code>.</p>
 <span>  num_starts <span class="op">=</span> <span class="fl">100L</span>,</span>
 <span>  breadth <span class="op">=</span> <span class="fl">1</span>,</span>
 <span>  parallel <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  num_cores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="fl">1L</span>, <span class="fu">future</span><span class="fu">::</span><span class="fu"><a href="https://parallelly.futureverse.org/reference/availableCores.html" class="external-link">availableCores</a></span><span class="op">(</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1L</span><span class="op">)</span>,</span>
 <span>  num_threads <span class="op">=</span> <span class="fu">RcppParallel</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/RcppParallel/man/setThreadOptions.html" class="external-link">defaultNumThreads</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  control <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  verbose <span class="op">=</span> <span class="cn">FALSE</span></span>
@@ -115,11 +114,6 @@ interpolate linearly.</p></dd>
 
 <dt id="arg-parallel">parallel<a class="anchor" aria-label="anchor" href="#arg-parallel"></a></dt>
 <dd><p>Logical. If TRUE, distribute starts via <span class="pkg">future</span>/<span class="pkg">furrr</span>.</p></dd>
-
-
-<dt id="arg-num-cores">num_cores<a class="anchor" aria-label="anchor" href="#arg-num-cores"></a></dt>
-<dd><p>Integer &gt;=1. Cores used if <code>parallel=TRUE</code>.
-Default is the number of cores available - 1.</p></dd>
 
 
 <dt id="arg-num-threads">num_threads<a class="anchor" aria-label="anchor" href="#arg-num-threads"></a></dt>
@@ -188,7 +182,7 @@ If <code>parallel=TRUE</code>, consider <code>num_threads=1</code>.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>

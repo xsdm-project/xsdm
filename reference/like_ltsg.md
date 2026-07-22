@@ -2,7 +2,11 @@
 
 Compute likelihood for LTSG model
 
-Compute likelihood for LTSG model
+## Usage
+
+``` r
+like_ltsg(mu, env_m, dl_mat, drl_mat, ortho_m, q, r)
+```
 
 ## Arguments
 
@@ -41,13 +45,7 @@ Compute likelihood for LTSG model
 
 A numeric vector of length \`r\` with computed sums.
 
-A numeric vector of length \`r\` with computed sums.
-
 ## Details
-
-This function calculates a likelihood-like measure using orthogonal
-matrices, environmental data, and diagonal matrices, leveraging parallel
-computation.
 
 This function calculates a likelihood-like measure using orthogonal
 matrices, environmental data, and diagonal matrices, leveraging parallel

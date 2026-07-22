@@ -16,7 +16,6 @@ optimize_likelihood(
   num_starts = 100L,
   breadth = 1,
   parallel = FALSE,
-  num_cores = max(1L, future::availableCores() - 1L),
   num_threads = RcppParallel::defaultNumThreads(),
   control = list(),
   verbose = FALSE
@@ -54,11 +53,6 @@ optimize_likelihood(
 - parallel:
 
   Logical. If TRUE, distribute starts via future/furrr.
-
-- num_cores:
-
-  Integer \>=1. Cores used if `parallel=TRUE`. Default is the number of
-  cores available - 1.
 
 - num_threads:
 

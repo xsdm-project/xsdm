@@ -55,7 +55,7 @@
 - [`interpret_parameters()`](https://xsdm-project.github.io/xsdm/reference/interpret_parameters.md)
   : Tool to help interpret xsdm model parameters
 
-- [`like_ltsg`](https://xsdm-project.github.io/xsdm/reference/like_ltsg.md)
+- [`like_ltsg()`](https://xsdm-project.github.io/xsdm/reference/like_ltsg.md)
   : Compute likelihood for LTSG model
 
 - [`like_neg_ltsgr()`](https://xsdm-project.github.io/xsdm/reference/like_neg_ltsgr.md)
