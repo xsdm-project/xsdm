@@ -84,7 +84,9 @@ terra::plot(sd_bio_1, main = "SD, bio1", xlab = "x", ylab = "y")
 terra::plot(sd_bio_12, main = "SD, bio12", xlab = "x", ylab = "y")
 ```
 
-![](reference/figures/README-plot-env-1.png)
+![plot of chunk plot-env](reference/figures/README-plot-env-1.png)
+
+plot of chunk plot-env
 
 ### 2 · Species occurrence data
 
@@ -96,16 +98,30 @@ top of the mean temperature map:
 d <- example_1$occ_df
 pts_0 <- terra::vect(d[d$presence == 0, ], geom = c("lon", "lat"),
                      crs = terra::crs(m_bio_1))
+#> Error:
+#> ! unable to find an inherited method for function 'vect' for signature 'x = "tbl_df"'
 pts_1 <- terra::vect(d[d$presence == 1, ], geom = c("lon", "lat"),
                      crs = terra::crs(m_bio_1))
+#> Error:
+#> ! unable to find an inherited method for function 'vect' for signature 'x = "tbl_df"'
 par(mfrow = c(1, 2), mar = c(3, 3, 2, 4))
 terra::plot(m_bio_1, main = "Non-detections", xlab = "x", ylab = "y")
 terra::plot(pts_0, add = TRUE, col = "black", pch = 20, cex = 0.2)
+#> Error in `h()`:
+#> ! error in evaluating the argument 'x' in selecting a method for function 'plot': object 'pts_0' not found
 terra::plot(m_bio_1, main = "Detections", xlab = "x", ylab = "y")
-terra::plot(pts_1, add = TRUE, col = "red", pch = 20, cex = 0.2)
 ```
 
-![](reference/figures/README-plot-occ-1.png)
+![plot of chunk plot-occ](reference/figures/README-plot-occ-1.png)
+
+plot of chunk plot-occ
+
+``` r
+
+terra::plot(pts_1, add = TRUE, col = "red", pch = 20, cex = 0.2)
+#> Error in `h()`:
+#> ! error in evaluating the argument 'x' in selecting a method for function 'plot': object 'pts_1' not found
+```
 
 ### 3 · Build the environmental data array
 
@@ -141,14 +157,14 @@ result <- optimize_likelihood(
 
 head(result$solutions[, c("start_id", "loglik", "convergence")])
 #>   start_id    loglik convergence
-#> 1       11 -1042.503           4
-#> 2        5 -1042.503           4
-#> 3       18 -1042.503           4
-#> 4       16 -1042.503           4
-#> 5       17 -1042.503           4
-#> 6        2 -1042.503           4
+#> 1       19 -1009.447           4
+#> 2        4 -1009.447           4
+#> 3       20 -1009.447           4
+#> 4       11 -1009.447           4
+#> 5        5 -1009.447           4
+#> 6        8 -1009.447           4
 result$best$loglik
-#> [1] -1042.503
+#> [1] -1009.447
 ```
 
 ### 5 · Interpret the fitted parameters
@@ -170,7 +186,9 @@ interpret_parameters(
 )
 ```
 
-![](reference/figures/README-interpret-1.png)
+![plot of chunk interpret](reference/figures/README-interpret-1.png)
+
+plot of chunk interpret
 
 ### 6 · Habitat suitability map
 
@@ -186,7 +204,9 @@ hab_suit <- habitat_suitability(
 terra::plot(hab_suit, main = "Habitat suitability", xlab = "x", ylab = "y")
 ```
 
-![](reference/figures/README-hab-suit-1.png)
+![plot of chunk hab-suit](reference/figures/README-hab-suit-1.png)
+
+plot of chunk hab-suit
 
 ------------------------------------------------------------------------
 
@@ -258,8 +278,8 @@ BibTeX:
 
 ## License
 
-xsdm is released under the [GNU Affero General Public License v3 or
-later](https://www.gnu.org/licenses/agpl-3.0.html).
+xsdm is released under the GNU Affero General Public License, version 3
+(AGPL-3.0) or any later version.
 
 # Package index
 
