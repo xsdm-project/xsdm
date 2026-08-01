@@ -244,5 +244,5 @@ BibTeX:
 
 ## License
 
-xsdm is released under the [GNU Affero General Public License v3 or
-later](https://www.gnu.org/licenses/agpl-3.0.html).
+xsdm is released under the GNU Affero General Public License, version 3
+(AGPL-3.0) or any later version.
