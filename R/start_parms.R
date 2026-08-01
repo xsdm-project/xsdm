@@ -44,11 +44,7 @@
 #'           degenerate single-point range.
 #'   }
 #' @keywords internal
-#' @examples
-#' set.seed(1)
-#' env <- array(rnorm(10 * 5 * 2), dim = c(10, 5, 2))
-#' get_range_df_(env)                 # default breadth = 1
-#' get_range_df_(env, breadth = 0.3)
+#' @noRd
 get_range_df_ <- function(env_dat,
                          breadth = 1,
                          quant_vec = NULL) {
