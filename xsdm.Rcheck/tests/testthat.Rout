@@ -1,0 +1,61 @@
+
+R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Copyright (C) 2025 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # This file is part of the standard setup for testthat.
+> # It is recommended that you do not modify it.
+> #
+> # Where should you do additional test configuration?
+> # Learn more about the roles of various files in:
+> # * https://r-pkgs.org/testing-design.html#sec-tests-files-overview
+> # * https://testthat.r-lib.org/articles/special-files.html
+> 
+> library(testthat)
+> library(xsdm)
+Package 'xsdm' version 1.0.1
+Type 'citation("xsdm")' for citing this R package in publications.
+
+> 
+> test_check("xsdm")
+terra 1.9.34
+
+Attaching package: 'terra'
+
+The following objects are masked from 'package:testthat':
+
+    compare, describe
+
+xsdm XPtr ObjFun error: ObjFun: canonical slot uncovered: sigltil1
+Best log-likelihood: -4.469524 (convergence=3)
+Optimizing from 4 starting points.
+Optimizing from 3 starting points.
+Best log-likelihood: -10.000000 (convergence=0)
+Progress: 0% (iter 1, conv=4)
+left side: reached maximum number of steps without crossing threshold
+Start right side
+Progress: 0% (iter 1, conv=3)
+right side: reached maximum number of steps without crossing threshold
+[ FAIL 0 | WARN 2 | SKIP 2 | PASS 1034 ]
+
+══ Skipped tests (2) ═══════════════════════════════════════════════════════════
+• On CRAN (2): 'test-convert_equivalence_class.R:2:3',
+  'test-optimize_likelihood.R:251:3'
+
+[ FAIL 0 | WARN 2 | SKIP 2 | PASS 1034 ]
+> 
+> proc.time()
+   user  system elapsed 
+ 11.487   0.366  10.253 

@@ -1,11 +1,22 @@
 .onLoad <- function(libname, pkgname) {
+  ns <- parent.env(environment())
+  
+  # Save the previous future.globals.maxSize option (if any) so we can
+  # restore it on unload -- required by CRAN policy for packages that
+  # modify global options.
+  if (!exists("xsdm", envir = ns, inherits = FALSE)) {
+    old_op <- getOption("future.globals.maxSize")
+    assign("xsdm", new.env(), envir = ns)
+    assign(".old_future_globals_maxSize", old_op,
+           envir = get("xsdm", envir = ns))
+  }
+  
   op <- options()
   op.xsdm <- list(
     future.globals.maxSize = 8.0 * 1024^3
   )
   toset <- !(names(op.xsdm) %in% names(op))
   if (any(toset)) options(op.xsdm[toset])
-  assign("xsdm", new.env(), envir = parent.env(environment()))
 }
 
 xsdmStartupMessage <- function()
@@ -35,6 +46,17 @@ __  _____  __| |_ __ ___
   invisible()
   
 }
+
 .onUnload <- function(libpath) {
+  # Restore the option we changed in .onLoad (CRAN policy)
+  if (exists("xsdm", envir = parent.env(environment()), inherits = FALSE)) {
+    xsdm_env <- get("xsdm", envir = parent.env(environment()))
+    if (exists(".old_future_globals_maxSize", envir = xsdm_env, inherits = FALSE)) {
+      old_op <- get(".old_future_globals_maxSize", envir = xsdm_env)
+      if (!is.null(old_op)) {
+        options(future.globals.maxSize = old_op)
+      }
+    }
+  }
   library.dynam.unload("xsdm", libpath)
 }

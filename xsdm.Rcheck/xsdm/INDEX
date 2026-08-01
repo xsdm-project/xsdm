@@ -1,0 +1,72 @@
+bio_to_math             Converts parameters from the biological scale
+                        to the math (unconstrained) scale
+build_orthogonal_matrix
+                        Build an orthogonal matrix from a
+                        real-parameter vector
+convert_equivalence_class
+                        Converts a set of parameters to other
+                        representatives of the same equivalence class
+create_mask             Create a parameter mask aligned with
+                        'make_mask_names()'
+create_param_vector_masked
+                        Create a complete parameter vector with
+                        canonical names (no NAs allowed)
+dist_between_params     Distance in parameter space between two sets of
+                        parameters
+env_data_array          Get an array of environmental data from
+                        presence-absence points.
+example_1               Consolidated example data for the xsdm package
+example_2               Consolidated example data for the xsdm. This is
+                        environmental data array and an occurrence
+                        presence absence vector of Ophisaurus
+                        ventralis. A named list containing all example
+                        datasets used in the package's documentation
+                        and examples.
+example_3               Consolidated example data for the xsdm. This is
+                        environmental data array and an occurrence
+                        presence absence vector Blarina carolinensis A
+                        named list containing all example datasets used
+                        in the package's documentation and examples.
+expit                   Functions to take the expit of numerical
+                        vectors. expit exp(x)/(1 + exp(x))
+extract_orthogonal_matrix_parameters
+                        Extract a math-scale real-parameter vector
+                        corresponding to a special orthogonal matrix
+habitat_suitability     Tiled habitat-suitability map from
+                        environmental raster stacks
+interpret_parameters    Tool to help interpret xsdm model parameters
+like_ltsg               Compute likelihood for LTSG model
+like_neg_ltsgr          Long-term stochastic growth rate worker
+                        function for the xsdm model
+log1mexp                Numerically stable 'log(1 - exp(-a))'
+log1pexp                Numerically stable 'log(1 + exp(x))'
+log_prob_detect         Probability of detection of the species in each
+                        location
+log_prob_detect_cpp     Compute log detection probabilities from a flat
+                        environmental data vector
+loglik_bio              Log-likelihood function for the xsdm model,
+                        parameters on the biological scale.
+loglik_bio_cpp          Pure-C++ log-likelihood for the xsdm model
+                        (biological-scale parameters)
+loglik_math             Log-likelihood function for the xsdm model,
+                        parameters on the math scale.
+loglik_math_cpp         Pure-C++ log-likelihood for the xsdm model
+                        (math-scale parameters)
+make_mask_names         Function to facilitate the creation of the
+                        argument 'mask' to the function 'loglik_math'
+math_to_bio             Convert parameters from the math scale to the
+                        biological scale
+num_env_var             Get the number of environmental variables given
+                        the number of parameters
+num_par                 Get the number of parameters of the main xsdm
+                        model given the number of environmental
+                        variables to be considered
+optimize_likelihood     Optimize the xsdm log-likelihood from multiple
+                        starts (ucminfcpp)
+profile_likelihood      Basic (non-adaptive) tool for profiling the
+                        likelihood
+start_parms             Starting parameters for the optimization
+vsp                     Generate a virtual species probability map with
+                        presence/absence sampling
+xsdm-package            xsdm: Demographic Approach to Species
+                        Distribution Model

@@ -1,0 +1,998 @@
+Hmm ... looks like a package
+Converting parsed Rd's to LaTeX ...
+Creating pdf output from LaTeX ...
+Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
+  texi2dvi script/program not available, using emulation
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Rd2.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo))
+(/usr/share/R/share/texmf/tex/latex/Rd.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file Rd2.idx
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file Rd2.aux.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd) [1{/var/lib/texmf/f
+onts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-
+0.enc}]
+No file Rd2.toc.
+
+Overfull \hbox (4.52745pt too wide) in paragraph at lines 89--94
+\T1/ptm/m/n/10 named nu-meric vec-tor on the math scale, in the canon-i-cal or-
+der pro-duced by `make_mask_names(p)`:
+[2]
+Overfull \hbox (18.73642pt too wide) in paragraph at lines 110--118
+\T1/ptm/m/n/10 `logit()` - `o_mat` : lower-triangular pa-ram-e-ters re-cov-ered
+ via `ex-tract_orthogonal_matrix_parameters()`
+[3] [4]
+Overfull \hbox (11.60986pt too wide) in paragraph at lines 212--214
+[]\T1/ptm/m/n/10 The di-men-sion `k` is in-ferred from `length(entries)` via th
+e re-la-tion $\OML/cmm/m/it/10 n \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)\OML/cmm/m/it/
+10 =\OT1/cmr/m/n/10 2$\T1/ptm/m/n/10 , so `length(entries)`
+[5] [6]
+Overfull \hbox (53.59618pt too wide) in paragraph at lines 341--347
+[]\T1/ptm/m/n/10 Builds the full pa-ram-e-ter vec-tor for use within `log-lik_m
+ath` us-ing canon-i-cal names from `make_mask_names(p)`
+
+Overfull \hbox (63.32755pt too wide) in paragraph at lines 374--378
+[]\T1/ptm/m/n/10 This is a thin R wrap-per around the in-ter-nal C++ im-ple-men
+-ta-tion []\T1/zi4/m/n/10 xsdm:::.build_canonical_param_vector_cpp[]\T1/ptm/m/n
+/10 .
+
+Overfull \hbox (25.3377pt too wide) in paragraph at lines 374--378
+\T1/ptm/m/n/10 The pre-port pure-R im-ple-men-ta-tion is pre-served in-ter-nall
+y as []\T1/zi4/m/n/10 xsdm:::create_param_vector_masked_r
+[7] [8]
+Overfull \hbox (14.13763pt too wide) in paragraph at lines 440--444
+\T1/ptm/m/n/10 names com-ple-ment []\T1/zi4/m/n/10 mask[]\T1/ptm/m/n/10 ) or bi
+ological-scale (a named list with en-tries []\T1/zi4/m/n/10 mu[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 sigltil[]\T1/ptm/m/n/10 ,
+[9] [10]
+Overfull \hbox (45.74847pt too wide) in paragraph at lines 585--587
+[]\T1/ptm/m/n/10 An in-te-ger vec-tor of length 4000. Bi-nary pres-ence/absence
+ (0/1) cor-re-spond-ing to []\T1/zi4/m/n/10 occ_df$presence[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (67.49767pt too wide) in paragraph at lines 596--600
+\T1/ptm/m/n/10 sen-ta-tion that be-longs to the same equiv-a-lence class as []\
+T1/zi4/m/n/10 optim_par_vec[]\T1/ptm/m/n/10 . Used to test []\T1/zi4/m/n/10 dis
+t_between_params()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (1.1484pt too wide) in paragraph at lines 613--616
+[]\T1/ptm/m/n/10 The en-vi-ron-men-tal data are orig-i-nally from CHELSA v2.1 (
+[][]$\T1/zi4/m/n/10 https : / / www . chelsa-[]climate . org/$[][]\T1/ptm/m/n/1
+0 ).
+[11] [12] [13] (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+[14]
+Overfull \hbox (16.94676pt too wide) in paragraph at lines 816--820
+[]\T1/ptm/m/n/10 A 3D nu-meric ar-ray of en-vi-ron-men-tal time se-ries data wi
+th di-men-sions []\T1/zi4/m/n/10 (locations)
+[15] [16]
+Overfull \hbox (3.91747pt too wide) in paragraph at lines 932--936
+[]\T1/ptm/m/n/10 A named list of biological-scale pa-ram-e-ters. Must con-tain 
+[]\T1/zi4/m/n/10 mu[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 sigltil[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 sigrtil[]\T1/ptm/m/n/10 ,
+[17]
+Overfull \hbox (1.94934pt too wide) in paragraph at lines 990--994
+\T1/ptm/m/n/10 or []\T1/zi4/m/n/10 "log_prob_detect" []\T1/ptm/m/n/10 (when []\
+T1/zi4/m/n/10 return_prob = FALSE[]\T1/ptm/m/n/10 ). The raster is re-turned in
+-vis-i-bly when []\T1/zi4/m/n/10 output
+[18]
+Overfull \hbox (4.10736pt too wide) in paragraph at lines 1050--1055
+[]\T1/ptm/m/n/10 A length-1 or length-2 in-te-ger vec-tor of in-dices of en-vi-
+ron-men-tal vari-ables against
+
+Overfull \hbox (0.37779pt too wide) in paragraph at lines 1063--1068
+[]\T1/ptm/m/n/10 Optional 3D nu-meric ar-ray of en-vi-ron-men-tal data with di-
+men-sions []\T1/zi4/m/n/10 (locations)
+
+Overfull \hbox (7.29889pt too wide) in paragraph at lines 1063--1068
+\T1/zi4/m/n/10 x (time) x (variables)[]\T1/ptm/m/n/10 . Re-quired for the two-p
+anel (pres-ence vs non-detection)
+
+Overfull \hbox (3.40842pt too wide) in paragraph at lines 1073--1079
+[]\T1/ptm/m/n/10 Scalar in []\T1/zi4/m/n/10 [0, 1] []\T1/ptm/m/n/10 con-trol-li
+ng how wide the auto-derived plot-ting win-dow is around
+[19] [20]
+Overfull \hbox (19.93767pt too wide) in paragraph at lines 1195--1200
+\T1/ptm/m/n/10 op-ti-mized us-ing \T1/ptm/b/n/10 Rcpp-Pa-r-al-lel\T1/ptm/m/n/10
+ . The legacy pure-R ref-er-ence is pre-served as []\T1/zi4/m/n/10 xsdm:::like_
+neg_ltsgr_r
+[21]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1224--1227
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1228--1231
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1234--1236
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+[22]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1300--1302
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1303--1305
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+[23] [24] [25]
+Overfull \hbox (2.16838pt too wide) in paragraph at lines 1442--1444
+[]\T1/ptm/m/n/10 Presence/pseudo-absence bi-nary vec-tor. Same length as di-men
+-sion 1 of []\T1/zi4/m/n/10 env_dat[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1448--1450
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1451--1453
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1468--1470
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (51.37819pt too wide) in paragraph at lines 1474--1482
+\T1/ptm/m/n/10 ([]\T1/zi4/m/n/10 sum_log_p = FALSE []\T1/ptm/m/n/10 or []\T1/zi
+4/m/n/10 return_prob = TRUE[]\T1/ptm/m/n/10 ) are com-puted by del-e-gat-ing to
+ the C++-backed []\T1/zi4/m/n/10 log_prob_detect
+[26] [27]
+Overfull \hbox (11.16849pt too wide) in paragraph at lines 1580--1590
+\T1/ptm/m/n/10 names must ex-actly match the canon-i-cal schema re-turned by []
+[][]\T1/zi4/m/n/10 make_mask_names[][][](p)
+[28]
+Overfull \hbox (2.16838pt too wide) in paragraph at lines 1596--1598
+[]\T1/ptm/m/n/10 Presence/pseudo-absence bi-nary vec-tor. Same length as di-men
+-sion 1 of []\T1/zi4/m/n/10 env_dat[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1613--1615
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+[29] [30] [31]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1797--1799
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1800--1802
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1813--1815
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (17.36926pt too wide) in paragraph at lines 1819--1824
+\T1/ptm/m/n/10 pack-age and is used only by the par-ity tests in []\T1/zi4/m/n/
+10 tests/testthat/test-log_prob_detect_r_vs_cpp.R[]\T1/ptm/m/n/10 . 
+[32] [33]
+Overfull \hbox (55.88893pt too wide) in paragraph at lines 1894--1896
+[]\T1/ptm/m/n/10 Integer. Num-ber of par-al-lel threads. []\T1/zi4/m/n/10 0 []\
+T1/ptm/m/n/10 (de-fault) uses []\T1/zi4/m/n/10 RcppParallel::defaultNumThreads(
+)[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (7.18744pt too wide) in paragraph at lines 1900--1903
+[]\T1/ptm/m/n/10 Collapses the R call chain []\T1/zi4/m/n/10 like_neg_ltsgr_cpp
+() -> like_ltsg() []\T1/ptm/m/n/10 into a sin-gle xtensor-accelerated
+
+Overfull \hbox (1.71916pt too wide) in paragraph at lines 1932--1937
+[]\T1/ptm/m/n/10 The out-put has length []\T1/zi4/m/n/10 3*p+(p^2-p)/2+2[]\T1/p
+tm/m/n/10 . The names of the en-tries are []\T1/zi4/m/n/10 mu1[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 mu2[]\T1/ptm/m/n/10 , ..., []\T1/zi4/m/n/10 mup[]\T1/ptm/m/n
+/10 , []\T1/zi4/m/n/10 sigltil1[]\T1/ptm/m/n/10 ,
+[34] [35] [36] [37]
+Overfull \hbox (15.16907pt too wide) in paragraph at lines 2171--2174
+[]\T1/zi4/m/n/10 solutions[]\T1/ptm/m/n/10 : data.frame sorted by de-creas-ing 
+[]\T1/zi4/m/n/10 loglik[]\T1/ptm/m/n/10 , columns: []\T1/zi4/m/n/10 start_id[]\
+T1/ptm/m/n/10 , []\T1/zi4/m/n/10 loglik[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 conv
+ergence[]\T1/ptm/m/n/10 ,
+[38] [39]
+Overfull \hbox (8.56926pt too wide) in paragraph at lines 2270--2273
+[]\T1/ptm/m/n/10 Named list. Con-trol passed to []\T1/zi4/m/n/10 ucminfcpp::ucm
+inf_xptr(control = ...)[]\T1/ptm/m/n/10 . User-
+[40] [41]
+Overfull \hbox (8.56926pt too wide) in paragraph at lines 2383--2385
+[]\T1/ptm/m/n/10 Named list. Con-trol passed to []\T1/zi4/m/n/10 ucminfcpp::ucm
+inf_xptr(control = ...)[]\T1/ptm/m/n/10 . User-
+
+Overfull \hbox (23.56815pt too wide) in paragraph at lines 2386--2388
+[]\T1/ptm/m/n/10 Named nu-meric. Full warm-start pa-ram-e-ter vec-tor. De-fault
+s to []\T1/zi4/m/n/10 optim_param_vector[]\T1/ptm/m/n/10 . 
+[42] [43] [44]
+No file Rd2.ind.
+[45] (./Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{Rfn.expm1} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.log1p} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.on.exit} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeStop} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readStop} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeValues} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readValues} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readStart} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeStart} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.SpatRaster} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (45 pages, 245456 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.17 [TeX Live 2025] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (90 entries accepted, 0 rejected).
+Sorting entries....done (683 comparisons).
+Generating output file Rd2.ind....done (133 lines written, 1 warning).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Rd2.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo))
+(/usr/share/R/share/texmf/tex/latex/Rd.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file Rd2.idx
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./Rd2.aux) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (./Rd2.out) (./Rd2.out)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd) [1{/var/lib/texmf/f
+onts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-
+0.enc}] (./Rd2.toc) [2]
+Overfull \hbox (4.52745pt too wide) in paragraph at lines 89--94
+\T1/ptm/m/n/10 named nu-meric vec-tor on the math scale, in the canon-i-cal or-
+der pro-duced by `make_mask_names(p)`:
+
+Overfull \hbox (18.73642pt too wide) in paragraph at lines 110--118
+\T1/ptm/m/n/10 `logit()` - `o_mat` : lower-triangular pa-ram-e-ters re-cov-ered
+ via `ex-tract_orthogonal_matrix_parameters()`
+[3] [4]
+Overfull \hbox (11.60986pt too wide) in paragraph at lines 212--214
+[]\T1/ptm/m/n/10 The di-men-sion `k` is in-ferred from `length(entries)` via th
+e re-la-tion $\OML/cmm/m/it/10 n \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)\OML/cmm/m/it/
+10 =\OT1/cmr/m/n/10 2$\T1/ptm/m/n/10 , so `length(entries)`
+[5] [6] [7]
+Overfull \hbox (53.59618pt too wide) in paragraph at lines 341--347
+[]\T1/ptm/m/n/10 Builds the full pa-ram-e-ter vec-tor for use within `log-lik_m
+ath` us-ing canon-i-cal names from `make_mask_names(p)`
+
+Overfull \hbox (63.32755pt too wide) in paragraph at lines 374--378
+[]\T1/ptm/m/n/10 This is a thin R wrap-per around the in-ter-nal C++ im-ple-men
+-ta-tion []\T1/zi4/m/n/10 xsdm:::.build_canonical_param_vector_cpp[]\T1/ptm/m/n
+/10 .
+
+Overfull \hbox (25.3377pt too wide) in paragraph at lines 374--378
+\T1/ptm/m/n/10 The pre-port pure-R im-ple-men-ta-tion is pre-served in-ter-nall
+y as []\T1/zi4/m/n/10 xsdm:::create_param_vector_masked_r
+[8]
+Overfull \hbox (14.13763pt too wide) in paragraph at lines 440--444
+\T1/ptm/m/n/10 names com-ple-ment []\T1/zi4/m/n/10 mask[]\T1/ptm/m/n/10 ) or bi
+ological-scale (a named list with en-tries []\T1/zi4/m/n/10 mu[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 sigltil[]\T1/ptm/m/n/10 ,
+[9] [10] [11]
+Overfull \hbox (45.74847pt too wide) in paragraph at lines 585--587
+[]\T1/ptm/m/n/10 An in-te-ger vec-tor of length 4000. Bi-nary pres-ence/absence
+ (0/1) cor-re-spond-ing to []\T1/zi4/m/n/10 occ_df$presence[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (67.49767pt too wide) in paragraph at lines 596--600
+\T1/ptm/m/n/10 sen-ta-tion that be-longs to the same equiv-a-lence class as []\
+T1/zi4/m/n/10 optim_par_vec[]\T1/ptm/m/n/10 . Used to test []\T1/zi4/m/n/10 dis
+t_between_params()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (1.1484pt too wide) in paragraph at lines 613--616
+[]\T1/ptm/m/n/10 The en-vi-ron-men-tal data are orig-i-nally from CHELSA v2.1 (
+[][]$\T1/zi4/m/n/10 https : / / www . chelsa-[]climate . org/$[][]\T1/ptm/m/n/1
+0 ).
+[12] [13] [14] (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+[15]
+Overfull \hbox (16.94676pt too wide) in paragraph at lines 816--820
+[]\T1/ptm/m/n/10 A 3D nu-meric ar-ray of en-vi-ron-men-tal time se-ries data wi
+th di-men-sions []\T1/zi4/m/n/10 (locations)
+[16] [17]
+Overfull \hbox (3.91747pt too wide) in paragraph at lines 932--936
+[]\T1/ptm/m/n/10 A named list of biological-scale pa-ram-e-ters. Must con-tain 
+[]\T1/zi4/m/n/10 mu[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 sigltil[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 sigrtil[]\T1/ptm/m/n/10 ,
+[18]
+Overfull \hbox (1.94934pt too wide) in paragraph at lines 990--994
+\T1/ptm/m/n/10 or []\T1/zi4/m/n/10 "log_prob_detect" []\T1/ptm/m/n/10 (when []\
+T1/zi4/m/n/10 return_prob = FALSE[]\T1/ptm/m/n/10 ). The raster is re-turned in
+-vis-i-bly when []\T1/zi4/m/n/10 output
+[19]
+Overfull \hbox (4.10736pt too wide) in paragraph at lines 1050--1055
+[]\T1/ptm/m/n/10 A length-1 or length-2 in-te-ger vec-tor of in-dices of en-vi-
+ron-men-tal vari-ables against
+
+Overfull \hbox (0.37779pt too wide) in paragraph at lines 1063--1068
+[]\T1/ptm/m/n/10 Optional 3D nu-meric ar-ray of en-vi-ron-men-tal data with di-
+men-sions []\T1/zi4/m/n/10 (locations)
+
+Overfull \hbox (7.29889pt too wide) in paragraph at lines 1063--1068
+\T1/zi4/m/n/10 x (time) x (variables)[]\T1/ptm/m/n/10 . Re-quired for the two-p
+anel (pres-ence vs non-detection)
+
+Overfull \hbox (3.40842pt too wide) in paragraph at lines 1073--1079
+[]\T1/ptm/m/n/10 Scalar in []\T1/zi4/m/n/10 [0, 1] []\T1/ptm/m/n/10 con-trol-li
+ng how wide the auto-derived plot-ting win-dow is around
+[20] [21]
+Overfull \hbox (19.93767pt too wide) in paragraph at lines 1195--1200
+\T1/ptm/m/n/10 op-ti-mized us-ing \T1/ptm/b/n/10 Rcpp-Pa-r-al-lel\T1/ptm/m/n/10
+ . The legacy pure-R ref-er-ence is pre-served as []\T1/zi4/m/n/10 xsdm:::like_
+neg_ltsgr_r
+[22]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1224--1227
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1228--1231
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1234--1236
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+[23]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1300--1302
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1303--1305
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+[24] [25] [26]
+Overfull \hbox (2.16838pt too wide) in paragraph at lines 1442--1444
+[]\T1/ptm/m/n/10 Presence/pseudo-absence bi-nary vec-tor. Same length as di-men
+-sion 1 of []\T1/zi4/m/n/10 env_dat[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1448--1450
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1451--1453
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1468--1470
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (51.37819pt too wide) in paragraph at lines 1474--1482
+\T1/ptm/m/n/10 ([]\T1/zi4/m/n/10 sum_log_p = FALSE []\T1/ptm/m/n/10 or []\T1/zi
+4/m/n/10 return_prob = TRUE[]\T1/ptm/m/n/10 ) are com-puted by del-e-gat-ing to
+ the C++-backed []\T1/zi4/m/n/10 log_prob_detect
+[27] [28]
+Overfull \hbox (11.16849pt too wide) in paragraph at lines 1580--1590
+\T1/ptm/m/n/10 names must ex-actly match the canon-i-cal schema re-turned by []
+[][]\T1/zi4/m/n/10 make_mask_names[][][](p)
+[29]
+Overfull \hbox (2.16838pt too wide) in paragraph at lines 1596--1598
+[]\T1/ptm/m/n/10 Presence/pseudo-absence bi-nary vec-tor. Same length as di-men
+-sion 1 of []\T1/zi4/m/n/10 env_dat[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1613--1615
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+[30] [31] [32]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1797--1799
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1800--1802
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1813--1815
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (17.36926pt too wide) in paragraph at lines 1819--1824
+\T1/ptm/m/n/10 pack-age and is used only by the par-ity tests in []\T1/zi4/m/n/
+10 tests/testthat/test-log_prob_detect_r_vs_cpp.R[]\T1/ptm/m/n/10 . 
+[33] [34]
+Overfull \hbox (55.88893pt too wide) in paragraph at lines 1894--1896
+[]\T1/ptm/m/n/10 Integer. Num-ber of par-al-lel threads. []\T1/zi4/m/n/10 0 []\
+T1/ptm/m/n/10 (de-fault) uses []\T1/zi4/m/n/10 RcppParallel::defaultNumThreads(
+)[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (7.18744pt too wide) in paragraph at lines 1900--1903
+[]\T1/ptm/m/n/10 Collapses the R call chain []\T1/zi4/m/n/10 like_neg_ltsgr_cpp
+() -> like_ltsg() []\T1/ptm/m/n/10 into a sin-gle xtensor-accelerated
+
+Overfull \hbox (1.71916pt too wide) in paragraph at lines 1932--1937
+[]\T1/ptm/m/n/10 The out-put has length []\T1/zi4/m/n/10 3*p+(p^2-p)/2+2[]\T1/p
+tm/m/n/10 . The names of the en-tries are []\T1/zi4/m/n/10 mu1[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 mu2[]\T1/ptm/m/n/10 , ..., []\T1/zi4/m/n/10 mup[]\T1/ptm/m/n
+/10 , []\T1/zi4/m/n/10 sigltil1[]\T1/ptm/m/n/10 ,
+[35] [36] [37] [38]
+Overfull \hbox (15.16907pt too wide) in paragraph at lines 2171--2174
+[]\T1/zi4/m/n/10 solutions[]\T1/ptm/m/n/10 : data.frame sorted by de-creas-ing 
+[]\T1/zi4/m/n/10 loglik[]\T1/ptm/m/n/10 , columns: []\T1/zi4/m/n/10 start_id[]\
+T1/ptm/m/n/10 , []\T1/zi4/m/n/10 loglik[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 conv
+ergence[]\T1/ptm/m/n/10 ,
+[39] [40]
+Overfull \hbox (8.56926pt too wide) in paragraph at lines 2270--2273
+[]\T1/ptm/m/n/10 Named list. Con-trol passed to []\T1/zi4/m/n/10 ucminfcpp::ucm
+inf_xptr(control = ...)[]\T1/ptm/m/n/10 . User-
+[41] [42]
+Overfull \hbox (8.56926pt too wide) in paragraph at lines 2383--2385
+[]\T1/ptm/m/n/10 Named list. Con-trol passed to []\T1/zi4/m/n/10 ucminfcpp::ucm
+inf_xptr(control = ...)[]\T1/ptm/m/n/10 . User-
+
+Overfull \hbox (23.56815pt too wide) in paragraph at lines 2386--2388
+[]\T1/ptm/m/n/10 Named nu-meric. Full warm-start pa-ram-e-ter vec-tor. De-fault
+s to []\T1/zi4/m/n/10 optim_param_vector[]\T1/ptm/m/n/10 . 
+[43] [44] [45] (./Rd2.ind [46]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 129.
+
+[47]) (./Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{Rfn.expm1} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.log1p} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.on.exit} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeStop} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readStop} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeValues} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readValues} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readStart} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeStart} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.SpatRaster} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (47 pages, 255729 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.17 [TeX Live 2025] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (90 entries accepted, 0 rejected).
+Sorting entries....done (683 comparisons).
+Generating output file Rd2.ind....done (133 lines written, 1 warning).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./Rd2.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo))
+(/usr/share/R/share/texmf/tex/latex/Rd.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/mathrsfs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/zi4.sty
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))))
+(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty)
+Writing index file Rd2.idx
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./Rd2.aux) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (./Rd2.out) (./Rd2.out)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd) [1{/var/lib/texmf/f
+onts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-
+0.enc}] (./Rd2.toc [2])
+Overfull \hbox (4.52745pt too wide) in paragraph at lines 89--94
+\T1/ptm/m/n/10 named nu-meric vec-tor on the math scale, in the canon-i-cal or-
+der pro-duced by `make_mask_names(p)`:
+
+Overfull \hbox (18.73642pt too wide) in paragraph at lines 110--118
+\T1/ptm/m/n/10 `logit()` - `o_mat` : lower-triangular pa-ram-e-ters re-cov-ered
+ via `ex-tract_orthogonal_matrix_parameters()`
+[3] [4]
+Overfull \hbox (11.60986pt too wide) in paragraph at lines 212--214
+[]\T1/ptm/m/n/10 The di-men-sion `k` is in-ferred from `length(entries)` via th
+e re-la-tion $\OML/cmm/m/it/10 n \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 k\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 k \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1)\OML/cmm/m/it/
+10 =\OT1/cmr/m/n/10 2$\T1/ptm/m/n/10 , so `length(entries)`
+[5] [6] [7]
+Overfull \hbox (53.59618pt too wide) in paragraph at lines 341--347
+[]\T1/ptm/m/n/10 Builds the full pa-ram-e-ter vec-tor for use within `log-lik_m
+ath` us-ing canon-i-cal names from `make_mask_names(p)`
+
+Overfull \hbox (63.32755pt too wide) in paragraph at lines 374--378
+[]\T1/ptm/m/n/10 This is a thin R wrap-per around the in-ter-nal C++ im-ple-men
+-ta-tion []\T1/zi4/m/n/10 xsdm:::.build_canonical_param_vector_cpp[]\T1/ptm/m/n
+/10 .
+
+Overfull \hbox (25.3377pt too wide) in paragraph at lines 374--378
+\T1/ptm/m/n/10 The pre-port pure-R im-ple-men-ta-tion is pre-served in-ter-nall
+y as []\T1/zi4/m/n/10 xsdm:::create_param_vector_masked_r
+[8]
+Overfull \hbox (14.13763pt too wide) in paragraph at lines 440--444
+\T1/ptm/m/n/10 names com-ple-ment []\T1/zi4/m/n/10 mask[]\T1/ptm/m/n/10 ) or bi
+ological-scale (a named list with en-tries []\T1/zi4/m/n/10 mu[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 sigltil[]\T1/ptm/m/n/10 ,
+[9] [10] [11]
+Overfull \hbox (45.74847pt too wide) in paragraph at lines 585--587
+[]\T1/ptm/m/n/10 An in-te-ger vec-tor of length 4000. Bi-nary pres-ence/absence
+ (0/1) cor-re-spond-ing to []\T1/zi4/m/n/10 occ_df$presence[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (67.49767pt too wide) in paragraph at lines 596--600
+\T1/ptm/m/n/10 sen-ta-tion that be-longs to the same equiv-a-lence class as []\
+T1/zi4/m/n/10 optim_par_vec[]\T1/ptm/m/n/10 . Used to test []\T1/zi4/m/n/10 dis
+t_between_params()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (1.1484pt too wide) in paragraph at lines 613--616
+[]\T1/ptm/m/n/10 The en-vi-ron-men-tal data are orig-i-nally from CHELSA v2.1 (
+[][]$\T1/zi4/m/n/10 https : / / www . chelsa-[]climate . org/$[][]\T1/ptm/m/n/1
+0 ).
+[12] [13] [14] (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd)
+[15]
+Overfull \hbox (16.94676pt too wide) in paragraph at lines 816--820
+[]\T1/ptm/m/n/10 A 3D nu-meric ar-ray of en-vi-ron-men-tal time se-ries data wi
+th di-men-sions []\T1/zi4/m/n/10 (locations)
+[16] [17]
+Overfull \hbox (3.91747pt too wide) in paragraph at lines 932--936
+[]\T1/ptm/m/n/10 A named list of biological-scale pa-ram-e-ters. Must con-tain 
+[]\T1/zi4/m/n/10 mu[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 sigltil[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 sigrtil[]\T1/ptm/m/n/10 ,
+[18]
+Overfull \hbox (1.94934pt too wide) in paragraph at lines 990--994
+\T1/ptm/m/n/10 or []\T1/zi4/m/n/10 "log_prob_detect" []\T1/ptm/m/n/10 (when []\
+T1/zi4/m/n/10 return_prob = FALSE[]\T1/ptm/m/n/10 ). The raster is re-turned in
+-vis-i-bly when []\T1/zi4/m/n/10 output
+[19]
+Overfull \hbox (4.10736pt too wide) in paragraph at lines 1050--1055
+[]\T1/ptm/m/n/10 A length-1 or length-2 in-te-ger vec-tor of in-dices of en-vi-
+ron-men-tal vari-ables against
+
+Overfull \hbox (0.37779pt too wide) in paragraph at lines 1063--1068
+[]\T1/ptm/m/n/10 Optional 3D nu-meric ar-ray of en-vi-ron-men-tal data with di-
+men-sions []\T1/zi4/m/n/10 (locations)
+
+Overfull \hbox (7.29889pt too wide) in paragraph at lines 1063--1068
+\T1/zi4/m/n/10 x (time) x (variables)[]\T1/ptm/m/n/10 . Re-quired for the two-p
+anel (pres-ence vs non-detection)
+
+Overfull \hbox (3.40842pt too wide) in paragraph at lines 1073--1079
+[]\T1/ptm/m/n/10 Scalar in []\T1/zi4/m/n/10 [0, 1] []\T1/ptm/m/n/10 con-trol-li
+ng how wide the auto-derived plot-ting win-dow is around
+[20] [21]
+Overfull \hbox (19.93767pt too wide) in paragraph at lines 1195--1200
+\T1/ptm/m/n/10 op-ti-mized us-ing \T1/ptm/b/n/10 Rcpp-Pa-r-al-lel\T1/ptm/m/n/10
+ . The legacy pure-R ref-er-ence is pre-served as []\T1/zi4/m/n/10 xsdm:::like_
+neg_ltsgr_r
+[22]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1224--1227
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1228--1231
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1234--1236
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+[23]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1300--1302
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1303--1305
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+[24] [25] [26]
+Overfull \hbox (2.16838pt too wide) in paragraph at lines 1442--1444
+[]\T1/ptm/m/n/10 Presence/pseudo-absence bi-nary vec-tor. Same length as di-men
+-sion 1 of []\T1/zi4/m/n/10 env_dat[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1448--1450
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1451--1453
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1468--1470
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (51.37819pt too wide) in paragraph at lines 1474--1482
+\T1/ptm/m/n/10 ([]\T1/zi4/m/n/10 sum_log_p = FALSE []\T1/ptm/m/n/10 or []\T1/zi
+4/m/n/10 return_prob = TRUE[]\T1/ptm/m/n/10 ) are com-puted by del-e-gat-ing to
+ the C++-backed []\T1/zi4/m/n/10 log_prob_detect
+[27] [28]
+Overfull \hbox (11.16849pt too wide) in paragraph at lines 1580--1590
+\T1/ptm/m/n/10 names must ex-actly match the canon-i-cal schema re-turned by []
+[][]\T1/zi4/m/n/10 make_mask_names[][][](p)
+[29]
+Overfull \hbox (2.16838pt too wide) in paragraph at lines 1596--1598
+[]\T1/ptm/m/n/10 Presence/pseudo-absence bi-nary vec-tor. Same length as di-men
+-sion 1 of []\T1/zi4/m/n/10 env_dat[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1613--1615
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+[30] [31] [32]
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1797--1799
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (42.55867pt too wide) in paragraph at lines 1800--1802
+[]\T1/ptm/m/n/10 Vector spec-i-fy-ing width of the growth-environment func-tion
+. Length []\T1/zi4/m/n/10 p=dim(env_dat)[3][]\T1/ptm/m/n/10 .
+
+Overfull \hbox (71.43858pt too wide) in paragraph at lines 1813--1815
+[]\T1/ptm/m/n/10 Number of threads for par-al-lel com-pu-ta-tion. De-faults to 
+[]\T1/zi4/m/n/10 RcppParallel::defaultNumThreads()[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (17.36926pt too wide) in paragraph at lines 1819--1824
+\T1/ptm/m/n/10 pack-age and is used only by the par-ity tests in []\T1/zi4/m/n/
+10 tests/testthat/test-log_prob_detect_r_vs_cpp.R[]\T1/ptm/m/n/10 . 
+[33] [34]
+Overfull \hbox (55.88893pt too wide) in paragraph at lines 1894--1896
+[]\T1/ptm/m/n/10 Integer. Num-ber of par-al-lel threads. []\T1/zi4/m/n/10 0 []\
+T1/ptm/m/n/10 (de-fault) uses []\T1/zi4/m/n/10 RcppParallel::defaultNumThreads(
+)[]\T1/ptm/m/n/10 . 
+
+Overfull \hbox (7.18744pt too wide) in paragraph at lines 1900--1903
+[]\T1/ptm/m/n/10 Collapses the R call chain []\T1/zi4/m/n/10 like_neg_ltsgr_cpp
+() -> like_ltsg() []\T1/ptm/m/n/10 into a sin-gle xtensor-accelerated
+
+Overfull \hbox (1.71916pt too wide) in paragraph at lines 1932--1937
+[]\T1/ptm/m/n/10 The out-put has length []\T1/zi4/m/n/10 3*p+(p^2-p)/2+2[]\T1/p
+tm/m/n/10 . The names of the en-tries are []\T1/zi4/m/n/10 mu1[]\T1/ptm/m/n/10 
+, []\T1/zi4/m/n/10 mu2[]\T1/ptm/m/n/10 , ..., []\T1/zi4/m/n/10 mup[]\T1/ptm/m/n
+/10 , []\T1/zi4/m/n/10 sigltil1[]\T1/ptm/m/n/10 ,
+[35] [36] [37] [38]
+Overfull \hbox (15.16907pt too wide) in paragraph at lines 2171--2174
+[]\T1/zi4/m/n/10 solutions[]\T1/ptm/m/n/10 : data.frame sorted by de-creas-ing 
+[]\T1/zi4/m/n/10 loglik[]\T1/ptm/m/n/10 , columns: []\T1/zi4/m/n/10 start_id[]\
+T1/ptm/m/n/10 , []\T1/zi4/m/n/10 loglik[]\T1/ptm/m/n/10 , []\T1/zi4/m/n/10 conv
+ergence[]\T1/ptm/m/n/10 ,
+[39] [40]
+Overfull \hbox (8.56926pt too wide) in paragraph at lines 2270--2273
+[]\T1/ptm/m/n/10 Named list. Con-trol passed to []\T1/zi4/m/n/10 ucminfcpp::ucm
+inf_xptr(control = ...)[]\T1/ptm/m/n/10 . User-
+[41] [42]
+Overfull \hbox (8.56926pt too wide) in paragraph at lines 2383--2385
+[]\T1/ptm/m/n/10 Named list. Con-trol passed to []\T1/zi4/m/n/10 ucminfcpp::ucm
+inf_xptr(control = ...)[]\T1/ptm/m/n/10 . User-
+
+Overfull \hbox (23.56815pt too wide) in paragraph at lines 2386--2388
+[]\T1/ptm/m/n/10 Named nu-meric. Full warm-start pa-ram-e-ter vec-tor. De-fault
+s to []\T1/zi4/m/n/10 optim_param_vector[]\T1/ptm/m/n/10 . 
+[43] [44] [45] (./Rd2.ind [46]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 129.
+
+[47]) (./Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{Rfn.expm1} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.log1p} has been referenced but does not exist, 
+replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.on.exit} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeStop} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readStop} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeValues} has been referenced but does not e
+xist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readValues} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.readStart} has been referenced but does not exi
+st, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.writeStart} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Rfn.SpatRaster} has been referenced but does not ex
+ist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (47 pages, 256389 bytes).
+Transcript written on Rd2.log.
+Saving output to ‘xsdm-manual.pdf’ ...
+Done
+You may want to clean up by 'rm -Rf /tmp/RtmpfvvKVo/Rd2pdf304801df797d8'

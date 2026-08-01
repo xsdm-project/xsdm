@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Demographic Approach to Species Distribution Model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<link rel="stylesheet" type="text/css" href="R.css">
+</head><body><div class="container">
+<h1> Demographic Approach to Species Distribution Model
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]">
+</h1>
+<hr>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]"></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]"></a>
+</div><h2>Documentation for package &lsquo;xsdm&rsquo; version 1.0.1</h2>
+
+<ul><li><a href="../DESCRIPTION" type="text/plain; charset=utf-8">DESCRIPTION file</a>.</li>
+<li><a href="../NEWS.md">Package NEWS</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="xsdm-package.html">xsdm-package</a></td>
+<td>xsdm: Demographic Approach to Species Distribution Model</td></tr>
+<tr><td style="width: 25%;"><a href="bio_to_math.html">bio_to_math</a></td>
+<td>Converts parameters from the biological scale to the math (unconstrained) scale</td></tr>
+<tr><td style="width: 25%;"><a href="build_orthogonal_matrix.html">build_orthogonal_matrix</a></td>
+<td>Build an orthogonal matrix from a real-parameter vector</td></tr>
+<tr><td style="width: 25%;"><a href="convert_equivalence_class.html">convert_equivalence_class</a></td>
+<td>Converts a set of parameters to other representatives of the same equivalence class</td></tr>
+<tr><td style="width: 25%;"><a href="create_mask.html">create_mask</a></td>
+<td>Create a parameter mask aligned with 'make_mask_names()'</td></tr>
+<tr><td style="width: 25%;"><a href="create_param_vector_masked.html">create_param_vector_masked</a></td>
+<td>Create a complete parameter vector with canonical names (no NAs allowed)</td></tr>
+<tr><td style="width: 25%;"><a href="dist_between_params.html">dist_between_params</a></td>
+<td>Distance in parameter space between two sets of parameters</td></tr>
+<tr><td style="width: 25%;"><a href="env_data_array.html">env_data_array</a></td>
+<td>Get an array of environmental data from presence-absence points.</td></tr>
+<tr><td style="width: 25%;"><a href="example_1.html">example_1</a></td>
+<td>Consolidated example data for the xsdm package</td></tr>
+<tr><td style="width: 25%;"><a href="example_2.html">example_2</a></td>
+<td>Consolidated example data for the xsdm. This is environmental data array and an occurrence presence absence vector of Ophisaurus ventralis. A named list containing all example datasets used in the package's documentation and examples.</td></tr>
+<tr><td style="width: 25%;"><a href="example_3.html">example_3</a></td>
+<td>Consolidated example data for the xsdm. This is environmental data array and an occurrence presence absence vector Blarina carolinensis A named list containing all example datasets used in the package's documentation and examples.</td></tr>
+<tr><td style="width: 25%;"><a href="expit.html">expit</a></td>
+<td>Functions to take the expit of numerical vectors. expit exp(x)/(1 + exp(x))</td></tr>
+<tr><td style="width: 25%;"><a href="extract_orthogonal_matrix_parameters.html">extract_orthogonal_matrix_parameters</a></td>
+<td>Extract a math-scale real-parameter vector corresponding to a special orthogonal matrix</td></tr>
+<tr><td style="width: 25%;"><a href="habitat_suitability.html">habitat_suitability</a></td>
+<td>Tiled habitat-suitability map from environmental raster stacks</td></tr>
+<tr><td style="width: 25%;"><a href="interpret_parameters.html">interpret_parameters</a></td>
+<td>Tool to help interpret xsdm model parameters</td></tr>
+<tr><td style="width: 25%;"><a href="like_ltsg.html">like_ltsg</a></td>
+<td>Compute likelihood for LTSG model</td></tr>
+<tr><td style="width: 25%;"><a href="like_neg_ltsgr.html">like_neg_ltsgr</a></td>
+<td>Long-term stochastic growth rate worker function for the xsdm model</td></tr>
+<tr><td style="width: 25%;"><a href="log1mexp.html">log1mexp</a></td>
+<td>Numerically stable 'log(1 - exp(-a))'</td></tr>
+<tr><td style="width: 25%;"><a href="log1pexp.html">log1pexp</a></td>
+<td>Numerically stable 'log(1 + exp(x))'</td></tr>
+<tr><td style="width: 25%;"><a href="loglik_bio.html">loglik_bio</a></td>
+<td>Log-likelihood function for the xsdm model, parameters on the biological scale.</td></tr>
+<tr><td style="width: 25%;"><a href="loglik_bio_cpp.html">loglik_bio_cpp</a></td>
+<td>Pure-C++ log-likelihood for the xsdm model (biological-scale parameters)</td></tr>
+<tr><td style="width: 25%;"><a href="loglik_math.html">loglik_math</a></td>
+<td>Log-likelihood function for the xsdm model, parameters on the math scale.</td></tr>
+<tr><td style="width: 25%;"><a href="loglik_math_cpp.html">loglik_math_cpp</a></td>
+<td>Pure-C++ log-likelihood for the xsdm model (math-scale parameters)</td></tr>
+<tr><td style="width: 25%;"><a href="log_prob_detect.html">log_prob_detect</a></td>
+<td>Probability of detection of the species in each location</td></tr>
+<tr><td style="width: 25%;"><a href="log_prob_detect_cpp.html">log_prob_detect_cpp</a></td>
+<td>Compute log detection probabilities from a flat environmental data vector</td></tr>
+<tr><td style="width: 25%;"><a href="make_mask_names.html">make_mask_names</a></td>
+<td>Function to facilitate the creation of the argument 'mask' to the function 'loglik_math'</td></tr>
+<tr><td style="width: 25%;"><a href="math_to_bio.html">math_to_bio</a></td>
+<td>Convert parameters from the math scale to the biological scale</td></tr>
+<tr><td style="width: 25%;"><a href="num_env_var.html">num_env_var</a></td>
+<td>Get the number of environmental variables given the number of parameters</td></tr>
+<tr><td style="width: 25%;"><a href="num_par.html">num_par</a></td>
+<td>Get the number of parameters of the main xsdm model given the number of environmental variables to be considered</td></tr>
+<tr><td style="width: 25%;"><a href="optimize_likelihood.html">optimize_likelihood</a></td>
+<td>Optimize the xsdm log-likelihood from multiple starts (ucminfcpp)</td></tr>
+<tr><td style="width: 25%;"><a href="profile_likelihood.html">profile_likelihood</a></td>
+<td>Basic (non-adaptive) tool for profiling the likelihood</td></tr>
+<tr><td style="width: 25%;"><a href="start_parms.html">start_parms</a></td>
+<td>Starting parameters for the optimization</td></tr>
+<tr><td style="width: 25%;"><a href="vsp.html">vsp</a></td>
+<td>Generate a virtual species probability map with presence/absence sampling</td></tr>
+<tr><td style="width: 25%;"><a href="xsdm-package.html">xsdm</a></td>
+<td>xsdm: Demographic Approach to Species Distribution Model</td></tr>
+</table>
+</div></body></html>
