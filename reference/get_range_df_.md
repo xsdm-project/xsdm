@@ -64,26 +64,8 @@ Internally, `breadth` is mapped to two monotonic quantities:
 ``` r
 set.seed(1)
 env <- array(rnorm(10 * 5 * 2), dim = c(10, 5, 2))
-xsdm:::get_range_df_(env)                 # default breadth = 1
-#>               lower        center      upper
-#> mu1      -0.8219844  0.1291041538  0.9594551
-#> mu2      -1.1388880  0.1137973312  1.4362768
-#> sigltil1 -0.7837805 -0.0906332806  0.6025139
-#> sigltil2 -0.7809272 -0.0877800581  0.6053671
-#> sigrtil1 -1.0179876 -0.3248403828  0.3683068
-#> sigrtil2 -0.6927734  0.0003737865  0.6935210
-#> ctil     -1.5860885 -0.8513780741 -0.5249049
-#> pd       -2.1972246  0.0000000000  2.1972246
-#> o_par1   -9.4247780  0.0000000000  9.4247780
-xsdm:::get_range_df_(env, breadth = 0.3) 
-#>                lower        center       upper
-#> mu1      -0.07583513  0.1291041538  0.44434919
-#> mu2      -0.19940643  0.1137973312  0.35210235
-#> sigltil1 -0.35299755 -0.0906332806  0.17173098
-#> sigltil2 -0.35014432 -0.0877800581  0.17458421
-#> sigrtil1 -0.58720465 -0.3248403828 -0.06247612
-#> sigrtil2 -0.26199048  0.0003737865  0.26273805
-#> ctil     -0.96471193 -0.8513780741 -0.69016869
-#> pd       -0.48955120  0.0000000000  0.48955120
-#> o_par1   -9.42477796  0.0000000000  9.42477796
+get_range_df_(env)                 # default breadth = 1
+#> Error in get_range_df_(env): could not find function "get_range_df_"
+get_range_df_(env, breadth = 0.3)
+#> Error in get_range_df_(env, breadth = 0.3): could not find function "get_range_df_"
 ```

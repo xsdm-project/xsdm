@@ -125,28 +125,10 @@ removed in a future release.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">env</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html" class="external-link">array</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">10</span> <span class="op">*</span> <span class="fl">5</span> <span class="op">*</span> <span class="fl">2</span><span class="op">)</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">5</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">xsdm</span><span class="fu">:::</span><span class="fu">get_range_df_</span><span class="op">(</span><span class="va">env</span><span class="op">)</span>                 <span class="co"># default breadth = 1</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               lower        center      upper</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> mu1      -0.8219844  0.1291041538  0.9594551</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> mu2      -1.1388880  0.1137973312  1.4362768</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigltil1 -0.7837805 -0.0906332806  0.6025139</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigltil2 -0.7809272 -0.0877800581  0.6053671</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigrtil1 -1.0179876 -0.3248403828  0.3683068</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigrtil2 -0.6927734  0.0003737865  0.6935210</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ctil     -1.5860885 -0.8513780741 -0.5249049</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> pd       -2.1972246  0.0000000000  2.1972246</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> o_par1   -9.4247780  0.0000000000  9.4247780</span>
-<span class="r-in"><span><span class="fu">xsdm</span><span class="fu">:::</span><span class="fu">get_range_df_</span><span class="op">(</span><span class="va">env</span>, breadth <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span> </span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                lower        center       upper</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> mu1      -0.07583513  0.1291041538  0.44434919</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> mu2      -0.19940643  0.1137973312  0.35210235</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigltil1 -0.35299755 -0.0906332806  0.17173098</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigltil2 -0.35014432 -0.0877800581  0.17458421</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigrtil1 -0.58720465 -0.3248403828 -0.06247612</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sigrtil2 -0.26199048  0.0003737865  0.26273805</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ctil     -0.96471193 -0.8513780741 -0.69016869</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> pd       -0.48955120  0.0000000000  0.48955120</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> o_par1   -9.42477796  0.0000000000  9.42477796</span>
+<span class="r-in"><span><span class="fu">get_range_df_</span><span class="op">(</span><span class="va">env</span><span class="op">)</span>                 <span class="co"># default breadth = 1</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get_range_df_(env):</span> could not find function "get_range_df_"</span>
+<span class="r-in"><span><span class="fu">get_range_df_</span><span class="op">(</span><span class="va">env</span>, breadth <span class="op">=</span> <span class="fl">0.3</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get_range_df_(env, breadth = 0.3):</span> could not find function "get_range_df_"</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
